@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FlexStart Bootstrap Template - Index</title>
+  <title>Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,7 +27,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <style>
+<style>
 
 .header {
     transition: all 0.5s;
@@ -93,6 +93,26 @@
     transition: 0.3s;
 }
 
+/*style text*/
+
+
+.blockText-01{
+  
+  flex-direction: column;
+  font-size: 2.1rem;
+  line-height: 2.5rem !important;
+}
+
+.blockText-01 .loginText {
+  display: block;
+  clear: both;
+  font-size: 3rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  color: #8501C4;
+  text-transform: uppercase;
+}
+
   </style>
 
 </head>
@@ -128,9 +148,29 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
 
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-           <p>fdsfdsf</p>
+    <div class="container" data-aos="fade-up">
+        <div class="row gx-0 mt-5 d-flex flex-row">
+          <div class="col-md-8">
+            <img src="./assets/img/tomandoCafe.png" alt="">
+            <p class="d-flex justify-content-center blockText-01">
+              Tomate un cafe mientras <span class="loginText"> solicitas tu préstamo </span>no tardaremos mucho
+            </p>
+          </div>
+  
+          <form class="d-flex flex-column justify-content-end col-md-4">
+            <div class="form-group ">
+              <label >Correo electronico</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar correo">
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+
+          </form>
         </div>
     </div>
 
