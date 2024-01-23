@@ -124,19 +124,110 @@
   
       </div>
     </header><!-- End Header -->
-    <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
 
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-           <p>fdsfdsf</p>
+<!--==== MAIN ====-->
+
+<section id="contact" class="contact" style="margin-top: 5%;">
+
+  <div class="container" data-aos="fade-up">
+
+
+    <div class="row gy-4">
+      <div class="col-lg-6">
+        
+
+        <form action="forms/contact.php" method="post" class="php-email-form">
+          <header class="section-header">
+            <h2>Crea tu cuenta</h2>
+          </header>
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <p style="margin: 0;">ingresa tu nombre</p>
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <p style="margin: 0;">ingresa tu apellido</p>
+              <input type="text" name="last_name" class="form-control" placeholder="Your last Name" required>
+            </div> 
+            <div class="col-md-6">
+              <p style="margin: 0;">tipo de documento</p>
+              <select class="form-select" name="type_document" id="type_document">
+                <option value="cedula">cedula de ciudadania </option>
+                <option value="pasaporte">pasaporte</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <p style="margin: 0;">numero de documento</p>
+              <input type="text" name="name" class="form-control" placeholder="1000445131" required>
+            </div>
+
+            <div class="col-md-6">
+              <p style="margin: 0;">numero de celular</p>
+              <input type="number" class="form-control" name="subject" placeholder="302 3159963" required>
+            </div>
+
+            <div class="col-md-6 ">
+              <p style="margin: 0;">correo electronico</p>
+              <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="col-md-12">
+              <p style="margin: 0;">Crea tu contraseña</p>
+              <input type="password" class="form-control" name="subject" placeholder="··········" required>
+            </div>
+
+            <div class="col-md-12">
+              <p style="margin: 0;">verifica tu contraseña</p>
+              <input type="password" class="form-control" name="subject" placeholder="··········" required>
+            </div>
+            
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Acepto <a href="">Terminos y Condiciones</a>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Autorizo <a href="">Tratamientos De Datos Personales</a> 
+              </label>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Crear tu cuenta</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+
+      <div class="col-lg-6">
+        <div class="col-md-12">
+          <h1>hagamos renacer tu</h1>
+          <p>economia</p>
+          <hr>
         </div>
+        <div class="col-lg-12">
+          <img src="assets/img/imagen del registro.png" alt="">
+        </div>
+        
+      </div>
     </div>
 
-  </section><!-- End About Section -->
-</main><!-- End #main -->
+  </div>
 
+</section><!-- End Contact Section -->
+
+
+  
+<!--==== END MAIN ====-->
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
 
