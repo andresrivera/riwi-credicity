@@ -1,0 +1,43 @@
+{
+    "loan_details": [
+      {
+        "documento_cliente": "555555",
+        "credit_data": [
+          {
+            "loan_id": "CL-001",
+            "total_capital": 10000.00,
+            "fecha_inicio": "2024-01-22",
+            "fecha_finalizacion": "2024-02-22",
+            "cuotas": 12,
+            "faltante": 6,
+            "valor_cuota": 1000.00,
+            "estado": "activo",
+            "total_a_pagar": 12000.00,
+            "seguro": 500.00,
+            "tasa_efectiva_anual": 10.5,
+            "iva": 120.00
+          }
+        ]
+      },
+      {
+        "documento_cliente": "123432234",
+        "credit_data": [
+          {
+            "loan_id": "CL-002",
+            "total_capital": 15000.00,
+            "fecha_inicio": "2024-01-20",
+            "fecha_finalizacion": "2024-03-20",
+            "cuotas": 24,
+            "faltante": 20,
+            "valor_cuota": 625.00,
+            "estado": "pendiente",
+            "total_a_pagar": 15000.00,
+            "seguro": 700.00,
+            "tasa_efectiva_anual": 12.2,
+            "iva": 180.00
+          }
+        ]
+      }
+    ]
+  }
+  
