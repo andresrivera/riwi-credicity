@@ -121,10 +121,12 @@
     /*stly box-logion*/
     .box-login {
       background-color: #e6e6e6;
+      
       border-radius: 30px;
       -webkit-box-shadow: 3px 3px 7px -1px rgba(0, 0, 0, 0.9);
       -moz-box-shadow: 3px 3px 7px -1px rgba(0, 0, 0, 0.9);
       box-shadow: 3px 3px 7px -1px rgba(0, 0, 0, 0.9);
+      width: 380px;
     }
 
     /*style btnlogin*/
@@ -133,6 +135,27 @@
       border: none;
       color: #ffffff;
     }
+
+    .title-registrarme{
+    display: flex;
+    flex-direction: column;
+  }
+
+    @media only screen and (max-width: 600px) {
+      #about img {
+    /*background-color: rgb(214, 34, 17);*/
+    width: 100%;
+    
+  }
+  .box-login{
+    width: 94%;
+    margin: 18px auto;
+  } 
+  .row-form-login{
+    flex-direction: column-reverse!important;
+  }
+  
+}
   </style>
 
 </head>
@@ -145,7 +168,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span>Logo aqui</span>
+        <span>CrediCity</span>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -157,8 +180,6 @@
               <Login>
                 <Registro></Registro>
             </a></li>
-
-          <li><a href="blog.html">Blog</a></li>
 
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
@@ -172,8 +193,8 @@
     <section id="about" class="about">
 
       <div class="container" data-aos="fade-up">
-        <div class="row gx-0 mt-5 d-flex flex-row">
-          <div class="col-md-6">
+        <div class="row gx-0 mt-5 d-flex flex-row row-form-login">
+          <div class="col-md-6 d-flex flex-column">
             <img src="./assets/img/TomandoCafe.png" alt="">
             <p class="d-flex justify-content-center blockText-01">
               Tomate un cafe mientras <span class="loginText"> solicitas tu préstamo </span>no tardaremos mucho
@@ -182,10 +203,10 @@
           <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
 
             <div>
-              <h3 class="flex-column">Iniciar sesion en CrediCity</h3>
+              <h1 class="flex-column mb-3">Inicia sesión en CrediCity</h1>
             </div>
 
-            <div class="d-flex flex-column w-75 h-50 d-flex align-items-center justify-content-center box-login">
+            <div class="d-flex flex-column w-90 h-50 d-flex align-items-center justify-content-center box-login py-4">
               <form class=" w-75">
                 <div class="form-group ">
                   <label>Correo electronico</label>
@@ -210,7 +231,7 @@
             </div>
 
             <div class="mt-4">
-              <h3 class="">¿Aun no te has registrado? <button class="btn buttonLogin"> Registrarme </button></h3>
+              <h3 class="title-registrarme">¿Aun no te has registrado? <button class="btn buttonLogin"> Registrarme </button></h3>
             </div>
           </div>
 
@@ -281,7 +302,7 @@
               Manila <br>
               Medellín, Antioquia<br>
               Colombia <br><br>
-              <strong>Teléfono:</strong> +57 604 4717766<br>
+              <strong>Teléfono:</strong> (+57) 604 4717766<br>
               <strong>Email:</strong> pipedrive.29@gmail.com
               14<br>
             </p>
