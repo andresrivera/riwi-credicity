@@ -2422,3 +2422,14 @@ section {
   font-size: 13px;
   color: #012970;
 }
+
+/* ======== ESTILOS EL MONÀ =========== */
+.TitleLogin{color: #9200D7}
+
+.label{margin: 0;color: #000000;}
+
+.BotonInicirSesion{border-radius: 55px; background-color: #9201D6; border-color: white;}
+
+.BotonInicirSesion:hover{background-color: white; color:#9201D6; border-color: #9201D6; };
+
+.myInpus{border-radius: 15px;}
