@@ -23,6 +23,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -234,38 +235,83 @@
       <div class="container-xl py-5">
         <div class="row align-items-start justify-content-center py-5">
           <div class="col-12 col-sm-9 col-lg-6 order-2 order-lg-1">
+            
+            
             <div class="border bg-white rounded-lg py-5 px-3 px-lg-5">
-              <h1 class="t7 font-weight-bold text-primary text-center pt-5">Calcule su crédito</h1>
-              <p class="t9 text-body mb-4 text-center">Quiero un crédito por un monto de:</p>
-              <div class="monto text-center px-5 pb-5">
-                <input placeholder="" type="tel">
-              </div>
-              <div class="d-flex align-items-center justify-content-between pb-5">
-                <button type="button" class="operator">-</button>
+              <h1 class="t7 font-weight-bold text-primary text-center pt-2">Calcule su crédito</h1>
+              <p class="t9 text-body mb-4 text-center" id="valueSee"></p>
+      
+              <div class="d-flex align-items-center justify-content-between pb-3">
+                <p>$ 250.000</p>
                 <div class="flex-fill px-5 px-lg-5">
-                  <input type="range" min="0" max="121680000" step="1000" id="simulador-credito_simulador-e-info_monto" aria-label="Monto crédito" class="slider">
+                  <span id=""></span>
+                  <input type="range" min="200000" max="5000000" step="10000"  value="250000" id="range" class="w-100">
                 </div>
-                <button type="button" class="operator">+</button>
+                <p>$ 5'000.000</p>
               </div>
-              <p class="t9 text-body text-center pt-5 mb-3">A un plazo de:</p>
-              <div class="d-flex align-items-center justify-content-between pb-5 pt-2">
-                <button type="button" disabled="disabled" class="operator">-</button>
-                <div class="flex-fill d-flex align-items-center justify-content-center rounded-lg mx-2 mx-lg-5 py-4 px-2 px-lg-5" style="background-color: rgb(250, 250, 250);">
-                  <div class="plazo">
-                    <input placeholder="" type="tel">
+              <p class="t9 text-body text-center">Plazo</p>
+
+              <div class="row d-flex w-100 justify-content-between" style="display: flex;">
+                <div class="col-md-3" style="background-color: rgb(250, 250, 250);">
+                  <div class="">
+                    <input type="radio" name="cuotas" class="me-2">
+                    <label for="">1 mes</label>
                   </div>
-                  <p class="t9 text-primary font-weight-bold m-0 ml-3">mes
-                    <!---->
-                  </p>
                 </div>
-                <button type="button" class="operator">+</button>
+
+                <div class="col-md-3"style="background-color: rgb(250, 250, 250);">
+                  <div class="">
+                    <input type="radio" name="cuotas" class="me-2">
+                    <label for="">2 meses</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3" style="background-color: rgb(250, 250, 250);">
+                  <div class="">
+                    <input type="radio" name="cuotas" class="me-2">
+                    <label for="">3 meses</label>
+                  </div>
+                </div>
               </div>
+
+              <h1 class="text-primary text-center pt-4">Su plan de pago</h1>
+              
+              <div>
+                <p class="t9 text-body mb-2 text-center">Monto</p>
+
+              </div>
+
+              <div>
+                <p class="t9 text-body mb-2 text-center">Cantidad de cuotas</p>
+
+              </div>
+
+              <div>
+                <p class="t9 text-body mb-2 text-center">Valor cuota:</p>
+
+              </div>
+
+              <div>
+                <p class="t9 text-body mb-2 text-center">Total intereses: </p>
+
+              </div>
+
+              <div>
+                <p class="t9 text-body mb-2 text-center">Total pagar: </p>
+
+              </div>
+
+
+
+            </div>
+
+
               <div class="text-center py-5">
                 <button type="button" class="btn btn-primary btn-md">SIMULAR CUOTAS</button>
               </div>
               <div>
                 <div>
-                  <!---->
+
                 </div>
               </div>
               <div class="py-2 px-3 d-block d-lg-none">
@@ -389,6 +435,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/calculator.js"></script>
   </body>
   
   </html>
