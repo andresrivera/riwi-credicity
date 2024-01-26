@@ -1,12 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FlexStart Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+
+.header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+    background: linear-gradient(180deg, rgba(198, 198, 198, 0.00) 0%, #C6C6C6 100%);
+}
+
+.navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover>a {
+    color: #444444;
+}
+
+
+    .footer .footer-top {
+    /*background: rgb(245, 204, 204) url(../img/footer-bg.png) no-repeat right top;*/
+    background: linear-gradient(180deg, #9200D7 0%, #050009 100%);
+    background-size: contain;
+    border-top: 1px solid #e1ecff;
+    border-bottom: 1px solid #e1ecff;
+    padding: 60px 0 30px 0;
+    color: white;
+}
+
+.footer .footer-top .footer-info .logo span {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    margin-top: 3px;
+}
+
+.footer .footer-top h4 {
+    color: #ffffff;
+}
+
+.footer .footer-top .footer-links ul a {
+    color: #ffffff;
+}
+.footer .footer-top .footer-links ul a:hover {
+    color: #e4e4e4;
+}
+
+.footer .footer-top .social-links a {
+    font-size: 20px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 0;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+  </style>
+
 </head>
 <body>
-    
-</body>
-</html> 
 
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="">
+          <span>CrediCity</span>
+        </a>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">¿Quíenes somos?</a></li>
+            <li><a class="nav-link scrollto" href="#services">¿Cómo funciona?</a></li>
+            <li><a class="nav-link scrollto" href="login.html"><Login>
+            <Registro></Registro></a></li>
+
+            <li><a href="blog.html">Blog</a></li>
+
+            <li><a class="getstarted scrollto" href="login.html">login/resgister</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+
+<!--==== MAIN ====-->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center" style="background-image: url(assets/img/imagen\ principal.png);">
+
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up" style="color: #9200D7;">SOLICITA TU <br> PRESTAMO</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">EN LINEA</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="login.html" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" style="border-radius: 50px; background-color:#ffffff; color: #9200D7; ">
+                <span>Solicitalo ya!</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+        <div class="container" data-aos="fade-up">
+  
+          <!-- Feature Icons -->
+          <div class="row feature-icons" data-aos="fade-up">
+            <h3 style="color: #000000;">requisitos para <a href="" style="color: #9200D7;">SOLICITAR TU PRESTAMO</a> en linea</h3>
+  
+            <div class="row">
+  
+              <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+                <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
+              </div>
+  
+              <div class="col-xl-8 d-flex content">
+                <div class="row align-self-center gy-4">
+  
+                  <div class="col-md-6 icon-box" data-aos="fade-up">
+                     <img src="assets/img/image 1.png" alt="">
+                    <div>
+                      <h4>Ser Mayor De Edad </h4>
+                      <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/img/image 2.png" alt="">
+                    <div>
+                      <h4>Cuenta Bancaria</h4>
+                      <p>Deber de tener la tu cuenta de banco activa, para poder hacer el desembolso del dinero</p>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/img/image 4.png" alt="">
+                    <div>
+                      <h4>Correo Electronico</h4>
+                      <p>Debes de tener tu correo electronico activo,para poder crear tu cuenta con nosotros</p>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                    <img style="height: 70px;" src="assets/img/compues.png" alt="">
+                    <div>
+                      <h4>Paz y Salvo</h4>
+                      <p>Debes de tener un paz y salvo con data credito, para nosotros poder darte un prestamo</p>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/img/image 5.png" alt="">
+                    <div>
+                      <h4>Linea telefonica</h4>
+                      <p>Debes de tener tu numero de telefo para poder enviarte mensajes sobre tu proceso de credito </p>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/img/image 7.png" alt="">
+                    <div>
+                      <h4>Ubicacion</h4>
+                      <p>Debes te tener siempre activa tu ubicacion ala hora de pedir tu prestamo o ver alguna otra informacion</p>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+  
+          </div><!-- End Feature Icons -->
+  
+        </div>
+  
+      </section><!-- End Features Section -->
+      <div class="wave bg-primary-superlight w-100">
+        <svg width="1440" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 64l80-10.7C160 43 320 21 480 26.7 640 32 800 64 960 64s320-32 400-48l80-16v96H0V64z" fill="#F7F4FB"></path>
+        </svg>
+      </div>
+      <div class="container-xl py-5">
+        <div class="row align-items-start justify-content-center py-5">
+          <div class="col-12 col-sm-9 col-lg-6 order-2 order-lg-1">
+            <div class="border bg-white rounded-lg py-5 px-3 px-lg-5">
+              <h1 class="t7 font-weight-bold text-primary text-center pt-5">Calcule su crédito</h1>
+              <p class="t9 text-body mb-4 text-center">Quiero un crédito por un monto de:</p>
+              <div class="monto text-center px-5 pb-5">
+                <input placeholder="" type="tel">
+              </div>
+              <div class="d-flex align-items-center justify-content-between pb-5">
+                <button type="button" class="operator">-</button>
+                <div class="flex-fill px-5 px-lg-5">
+                  <input type="range" min="0" max="121680000" step="1000" id="simulador-credito_simulador-e-info_monto" aria-label="Monto crédito" class="slider">
+                </div>
+                <button type="button" class="operator">+</button>
+              </div>
+              <p class="t9 text-body text-center pt-5 mb-3">A un plazo de:</p>
+              <div class="d-flex align-items-center justify-content-between pb-5 pt-2">
+                <button type="button" disabled="disabled" class="operator">-</button>
+                <div class="flex-fill d-flex align-items-center justify-content-center rounded-lg mx-2 mx-lg-5 py-4 px-2 px-lg-5" style="background-color: rgb(250, 250, 250);">
+                  <div class="plazo">
+                    <input placeholder="" type="tel">
+                  </div>
+                  <p class="t9 text-primary font-weight-bold m-0 ml-3">mes
+                    <!---->
+                  </p>
+                </div>
+                <button type="button" class="operator">+</button>
+              </div>
+              <div class="text-center py-5">
+                <button type="button" class="btn btn-primary btn-md">SIMULAR CUOTAS</button>
+              </div>
+              <div>
+                <div>
+                  <!---->
+                </div>
+              </div>
+              <div class="py-2 px-3 d-block d-lg-none">
+                <p class="my-5 font-weight-bolder t8">¡
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-9 col-lg-6 text-body order-1 order-lg-2">
+            <div class="microcredito mb-5">
+              <div class="position-relative w-100 h-100">
+                <div class="circle"></div>
+                <figure class="rounded-lg mb-5 mb-sm-0"></figure>
+              </div>
+            </div>
+            <div class="py-5 mt-5 d-none d-lg-block">
+              <p class="my-5 font-weight-bolder t9">¡</p>
+            </div>
+          </div>
+        </div>
+      </div><p class="d-none">Simulador + información - Para negocio</p>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <span>CrediCity</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Inicio</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Preguntas</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Quienes Somos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Como funciona</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>TRANSPARENCIA</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terminos y condiciones</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>CONTÁCTANOS</h4>
+          <p>
+            Manila <br>
+            Medellín, Antioquia<br>
+            Colombia <br><br>
+            <strong>Teléfono:</strong> +57 604 4717766<br>
+            <strong>Email:</strong> pipedrive.29@gmail.com
+            14<br>
+          </p>
+          <p>
+            horarios de atencion:<br>
+            lunes a viernes<br>
+            de 8 a.m a 10p.m.<br>
+            sabados y domingos.<br>
+            de 8 a.m a 1 pm<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>FinTech3</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="#/">Fintech3</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+  </body>
+  
+  </html>
+         
