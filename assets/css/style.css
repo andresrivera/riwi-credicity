@@ -2426,10 +2426,30 @@ section {
 /* ======== ESTILOS EL MONÀ =========== */
 .TitleLogin{color: #9200D7}
 
-.label{margin: 0;color: #000000;}
+.label{
+  margin: 0;
+  color: #000000;
+}
 
 .BotonInicirSesion{border-radius: 55px; background-color: #9201D6; border-color: white;}
 
-.BotonInicirSesion:hover{background-color: white; color:#9201D6; border-color: #9201D6; };
+.BotonInicirSesion:hover{background-color: white !important; color:#9201D6 !important; border: 1px solid #9201D6 !important; };
 
 .myInpus{border-radius: 15px;}
+
+.PsRegister{margin: 0;color: #000000;}
+
+.InpusRegister{border-radius: 10px!important;}
+
+.InpusRegister:focus{border:2px solid #9200D7 !important}
+
+.ButtonRegister{border-radius: 55px !important; background-color: #9201D6 !important}
+
+.ButtonRegister:hover{background-color: white !important;color:  #9201D6 !important; border: 1px solid #9201D6 !important;}
+
+h2.TittleRegister {font-size: 30px ; color:  #9201D6;}
+
+
+.BoxRegister{background-color: #EEEEEE;border-radius: 20px;}
+
+.Aregisters{color: #9200D7;}
