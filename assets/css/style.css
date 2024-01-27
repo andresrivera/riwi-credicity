@@ -2431,9 +2431,15 @@ section {
   color: #000000;
 }
 
-.BotonInicirSesion{border-radius: 55px; background-color: #9201D6; border-color: white;}
+.BotonInicirSesion{border-radius: 55px;
+   background-color: #9201D6; border-color: white;
+  }
 
-.BotonInicirSesion:hover{background-color: white !important; color:#9201D6 !important; border: 1px solid #9201D6 !important; };
+.BotonInicirSesion:hover{
+  background-color: white !important; 
+  color:#9201D6 !important;
+   border: 1px solid #9201D6 !important; 
+  };
 
 .myInpus{border-radius: 15px;}
 
@@ -2441,15 +2447,65 @@ section {
 
 .InpusRegister{border-radius: 10px!important;}
 
-.InpusRegister:focus{border:2px solid #9200D7 !important}
-
-.ButtonRegister{border-radius: 55px !important; background-color: #9201D6 !important}
-
-.ButtonRegister:hover{background-color: white !important;color:  #9201D6 !important; border: 1px solid #9201D6 !important;}
-
-h2.TittleRegister {font-size: 30px ; color:  #9201D6;}
+.InpusRegister:focus{
+  border:2px solid #9200D7 !important}
 
 
-.BoxRegister{background-color: #EEEEEE;border-radius: 20px;}
+.ButtonRegister{
+  border-radius: 55px !important;
+   background-color: #9201D6 !important
+  }
+
+.ButtonRegister:hover{
+  background-color: white !important;
+  color:  #9201D6 !important;
+   border: 1px solid #9201D6 !important;}
+   
+
+h2.TittleRegister {font-size: 30px; 
+  color:  #9201D6;
+}
+
+.BoxRegister{
+  background-color: #EEEEEE;
+  border-radius: 20px;}
 
 .Aregisters{color: #9200D7;}
+
+.SolicitCredito{
+  color: #9200D7 !important;
+}
+
+.card-azul-mona{
+  border-bottom:1px solid#07d5c0;
+  padding: 10px;
+}
+
+.card-morado-mona{
+  border-bottom:1px solid  #9201D6;
+  padding: 10px;
+}
+
+.ButtonIndex{
+  border-radius: 50px; 
+  width: 200px; 
+  height: 70px;
+  background-color: white;
+  color:  #9201D6;
+  border: 1px solid  #9201D6;
+}
+
+.ButtonIndex:hover{
+  background-color: #9201D6;
+  color: white;
+}
+
+.MiPrincipalButon{
+  border-radius: 50px !important; 
+  background-color:#ffffff!important;
+  color: #9200D7!important
+}
+.MiPrincipalButon:hover{
+  background-color: #9201D6 !important;
+  color: white !important;
+}

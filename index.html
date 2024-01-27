@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FlexStart Bootstrap Template - Index</title>
+  <title>CrediCity</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -130,19 +130,141 @@
   <section id="hero" class="hero d-flex align-items-center" style="background-image: url(assets/img/imagen\ principal.png);">
 
     <div class="container" >
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up" style="color: #9200D7;">SOLICITA TU <br> PRESTAMO</h1>
+      
+      <div class="row ">
+
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="border bg-white rounded-lg py-5 px-3 px-lg-5">
+              <form name="calculatorForm">
+
+                <div class="border bg-white rounded-lg py-5 px-3 px-lg-5">
+                  <h1 class="t7 font-weight-bold text-primary text-center pt-2">Calcule su crédito</h1>
+                  <p class="t9 text-body mb-4 text-center" id="valueSee"></p>
+          
+                  <div class="d-flex align-items-center justify-content-between pb-3">
+                    <p>$ 200.000</p>
+                    <div class="flex-fill px-5 px-lg-5">
+                      <span id=""></span>
+                      <input type="range" min="200000" max="5000000" step="10000"  value="250000" id="range" class="w-100">
+                    </div>
+                    <p>$ 5'000.000</p>
+                  </div>
+                  <p class="t9 text-body text-center">Plazo</p>
+    
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-md-3" style ="background-color: rgb(250, 250, 250);">
+                      <div class="">
+                        <input type="radio" name ="cuotasCredito" value ="1" class="me-2">
+                        <label for="">1 mes</label>
+                      </div>
+                    </div>
+    
+                    <div class="col-md-3"style="background-color: rgb(250, 250, 250);">
+                      <div class="">
+                        <input type="radio" name="cuotasCredito" value ="2" class="me-2">
+                        <label for="">2 meses</label>
+                      </div>
+                    </div>
+    
+                    <div class="col-md-3" style="background-color: rgb(250, 250, 250);">
+                      <div class="">
+                        <input type="radio" value = "3" name="cuotasCredito" class="me-2">
+                        <label for="">3 meses</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                   <div class="text-center mt-4">
+                    <button type="button" id="btnSimularCredito" class="btn btn-primary btn-md">SIMULAR MI CREDITO</button>
+                  </div>
+  
+  
+                  <h1 class="text-primary text-center pt-4">Su plan de pago:</h1>
+                  
+                  <div class="d-grid">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p class="text-body mb-2 text-center">Monto:</p>
+                      </div>
+    
+                      <div class="col-md-6">
+                        <p id="totalMonto"></p>
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6">
+    
+                        <p class="text-body mb-2 text-center">Cantidad de cuotas:</p>
+                      </div>
+    
+                      <div class="col-md-6">
+                        <p id="totalCuotas">
+    
+                        </p>
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6">
+    
+                        <p class="text-body mb-2 text-center">Valor cuota mensual:</p>
+                      </div>
+    
+                      <div class="col-md-6">
+                        <p id="valorCuota"></p>
+                      </div>
+    
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6">
+    
+                        <p class="text-body mb-2 text-center">Total intereses: </p>
+                      </div>
+    
+                      <div class="col-md-6">
+                        <p id="totalIntereses"></p>
+                      </div>
+    
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p class="text-body mb-2 text-center">Total pagar: </p>
+                      </div>
+    
+                      <div class="col-md-6">
+                        <p id="totalPagar"></p>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="text-center py-3">
+                    <button type="button" class="btn btn-primary btn-md">PEDIR MI CREDITO</button>
+                  </div>
+    
+                </div>
+  
+              </form>
+  
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-end">
+          <h1 class="d-flex align-item-end SolicitCredito" data-aos="fade-up" >SOLICITA TU <br> PRESTAMO</h1>
           <h2 data-aos="fade-up" data-aos-delay="400">EN LINEA</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="login.html" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" style="border-radius: 50px; background-color:#ffffff; color: #9200D7; ">
+              <a href="login.html" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center MiPrincipalButon" >
                 <span>Solicitalo ya!</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
+      </div>
+      
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
           <img src="" class="img-fluid" alt="">
         </div>
@@ -159,40 +281,40 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
+              <i class="bi bi-emoji-smile" style="color:#9200D7"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
+                <p>Asociados</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <i class="bi bi-journal-richtext" style="color: #07d5c0;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
+                <p>Cantidad Prestamos</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <i class="bi bi-headset" style="color: #9200D7"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
+                <p>Horas De Atención</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <i class="bi bi-people" style="color: #07d5c0"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
+                <span data-purecounter-start="0" data-purecounter-end="30 " data-purecounter-duration="1" class="purecounter">min</span>
+                <p>Minutos Para Tu Credito</p>
               </div>
             </div>
           </div>
@@ -203,12 +325,63 @@
     </section><!-- End Counts Section -->
      
 
+  <!-- ======= Pricing Section ======= -->
+  <section id="pricing" class="pricing">
 
-     
-     
+    <div class="container" data-aos="fade-up">
 
+      
 
-    
+      <div class="row gy-4" data-aos="fade-left">
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="box">
+            <h3 style="color: #07d5c0;">100% Confiable</h3>
+            <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
+            <p  class="card-azul-mona">
+               Brindandole ayuda a personas como tu!!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="box">
+            <h3 style="color: #9201D6">Solo Con Tu Celular</h3>
+            <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
+
+            <p class="card-morado-mona"> 
+              Si!, solo necesitas tu celular para solicitar tu credito con nosotros
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="box">
+            <h3 style="color:#07d5c0;">Credito En Un Dia </h3>
+            <!-- <div class="price"><sup>$</sup>29<span> / mo</span></div> -->
+            <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
+           <p class="card-azul-mona">
+            Puedes optener tu credito de manera agil, en un YA!!
+           </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="box">
+            <h3 style="color:#9201D6;">24 Hs Para Tus Dudas</h3>
+            <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+           <p class="card-morado-mona">
+            Estamos para tu servicio las 24 horas del dia
+           </p>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <button type="button" class="ButtonIndex">Solicitalo ya!</button>
+        </div>
+        
+      </div>
+  </section><!-- End Pricing Section -->
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
@@ -217,8 +390,7 @@
   
           <!-- Feature Icons -->
           <div class="row feature-icons" data-aos="fade-up">
-            <h3 style="color: #000000;">requisitos para <a href="" style="color: #9200D7;">SOLICITAR TU PRESTAMO</a> en linea</h3>
-  
+            <h3 style="color: #000000;">requisitos para <a href="" class="SolicitCredito" >SOLICITAR TU PRESTAMO</a> en linea</h3>
             <div class="row">
   
               <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
@@ -286,112 +458,32 @@
         </div>
   
       </section><!-- End Features Section -->
-      <div class="wave bg-primary-superlight w-100">
-        <svg width="1440" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 64l80-10.7C160 43 320 21 480 26.7 640 32 800 64 960 64s320-32 400-48l80-16v96H0V64z" fill="#F7F4FB"></path>
-        </svg>
+
+<!-- ======= Clients Section ======= -->
+<section id="clients" class="clients">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2 class="TittleRegister ">Nuestros Aliados</h2>
+    </header>
+
+    <div class="clients-slider swiper">
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide"><img src="assets/img/clients/bancolombia.png" class="img-fluid w-100" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/BBVA-logo.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/Davivienda.png" class="img-fluid w-100" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/Banco_Agrario_de_Colombia_logo.svg.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/Banco_de_Bogotá_logo.svg.png" class="img-fluid w-100" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/Banco_Caja_Social_svg.png" class="img-fluid w-100" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/logo-bancamia.png" class="img-fluid w-100" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/Banco_AV_Villas_logo.svg.png" class="img-fluid w-100" alt=""></div>
       </div>
-      <div class="container-xl py-5">
-        <div class="row align-items-start justify-content-center py-5">
-          <div class="col-12 col-sm-9 col-lg-6 order-2 order-lg-1">
-            
-            
-            <div class="border bg-white rounded-lg py-5 px-3 px-lg-5">
-              <h1 class="t7 font-weight-bold text-primary text-center pt-2">Calcule su crédito</h1>
-              <p class="t9 text-body mb-4 text-center" id="valueSee"></p>
-      
-              <div class="d-flex align-items-center justify-content-between pb-3">
-                <p>$ 250.000</p>
-                <div class="flex-fill px-5 px-lg-5">
-                  <span id=""></span>
-                  <input type="range" min="200000" max="5000000" step="10000"  value="250000" id="range" class="w-100">
-                </div>
-                <p>$ 5'000.000</p>
-              </div>
-              <p class="t9 text-body text-center">Plazo</p>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
 
-              <div class="row d-flex w-100 justify-content-between" style="display: flex;">
-                <div class="col-md-3" style="background-color: rgb(250, 250, 250);">
-                  <div class="">
-                    <input type="radio" name="cuotas" class="me-2">
-                    <label for="">1 mes</label>
-                  </div>
-                </div>
-
-                <div class="col-md-3"style="background-color: rgb(250, 250, 250);">
-                  <div class="">
-                    <input type="radio" name="cuotas" class="me-2">
-                    <label for="">2 meses</label>
-                  </div>
-                </div>
-
-                <div class="col-md-3" style="background-color: rgb(250, 250, 250);">
-                  <div class="">
-                    <input type="radio" name="cuotas" class="me-2">
-                    <label for="">3 meses</label>
-                  </div>
-                </div>
-              </div>
-
-              <h1 class="text-primary text-center pt-4">Su plan de pago</h1>
-              
-              <div>
-                <p class="t9 text-body mb-2 text-center">Monto</p>
-
-              </div>
-
-              <div>
-                <p class="t9 text-body mb-2 text-center">Cantidad de cuotas</p>
-
-              </div>
-
-              <div>
-                <p class="t9 text-body mb-2 text-center">Valor cuota:</p>
-
-              </div>
-
-              <div>
-                <p class="t9 text-body mb-2 text-center">Total intereses: </p>
-
-              </div>
-
-              <div>
-                <p class="t9 text-body mb-2 text-center">Total pagar: </p>
-
-              </div>
-
-
-
-            </div>
-
-
-              <div class="text-center py-5">
-                <button type="button" class="btn btn-primary btn-md">SIMULAR CUOTAS</button>
-              </div>
-              <div>
-                <div>
-
-                </div>
-              </div>
-              <div class="py-2 px-3 d-block d-lg-none">
-                <p class="my-5 font-weight-bolder t8">¡
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-9 col-lg-6 text-body order-1 order-lg-2">
-            <div class="microcredito mb-5">
-              <div class="position-relative w-100 h-100">
-                <div class="circle"></div>
-                <figure class="rounded-lg mb-5 mb-sm-0"></figure>
-              </div>
-            </div>
-            <div class="py-5 mt-5 d-none d-lg-block">
-              <p class="my-5 font-weight-bolder t9">¡</p>
-            </div>
-          </div>
-        </div>
-      </div><p class="d-none">Simulador + información - Para negocio</p>
-
+</section><!-- End Clients Section -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -481,7 +573,7 @@
   </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center" style="background-color: #9200D7; border-radius: 20px;"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
