@@ -167,7 +167,7 @@
       <div class="col-lg-6">
         
 
-        <form action="forms/contact.php" method="post" class="php-email-form BoxRegister" >
+        <form  method="post" class="php-email-form BoxRegister" >
           <header class="section-header">
             <h2 class="TittleRegister" >Crea tu cuenta</h2>
           </header>
@@ -181,21 +181,51 @@
               <p class="PsRegister">ingresa tu apellido</p>
               <input type="text" id="last_name" class="form-control InpusRegister" placeholder="Your last Name" > 
             </div> 
-            <div class="col-md-6">
-              <p class="PsRegister" >tipo de documento</p>
-              <select class="form-select" id="type_document InpusRegister" id="type_document">
-                <option value="cedula">cedula de ciudadania </option>
-                <option value="pasaporte">pasaporte</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <p class="PsRegister">numero de documento</p>
-              <input type="text" id="document" class="form-control InpusRegister" placeholder="1000445131" >
-            </div>
+
+
+
+  <div class="col-md-4 col-sm-12">
+    <p class="PsRegister" >Tipo de documento</p>
+    <select class="form-select InpusRegister" id="type_document">
+      <option value="cedula">Cedula de ciudadania </option>
+      <option value="pasaporte">Pasaporte</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <p class="PsRegister">Número de documento</p>
+    <input type="text" id="document" class="form-control InpusRegister" placeholder="1000445131" >
+  </div>
+  <div class="col-md-4">
+    <p class="PsRegister">Fecha de Expedición</p>
+    <input type="date" id="document_expedition" class="form-control InpusRegister" placeholder="1000445131" >
+  </div>
+
+  <div class="col-md-6">
+    <p class="PsRegister">Fecha de Nacimiento</p>
+    <input type="date" id="birthday" class="form-control InpusRegister" >
+  </div>
+  <div class="col-md-6">
+    <p class="PsRegister">Género</p>
+    
+    <div class="d-flex align-items-center justify-content-center justify-content-around">
+      
+      
+      
+      <div>
+        <input type="radio" id="hombre" name="gendern" class="zzz"  value="hombre" /><label for="gendern">Hombre</label>
+      </div>
+      <div>
+        <input type="radio" id="mujer" name="gendern" class="zzz" value="mujer" /><label for="gendern" >Mujer</label></div>
+      </div>
+      
+    
+    
+  </div>
+
 
             <div class="col-md-6">
               <p class="PsRegister">numero de celular</p>
-              <input type="number" class="form-control InpusRegister" id="number_phone" placeholder="3023159963" >
+              <input type="tel" class="form-control InpusRegister" id="phone_number" placeholder="3023159963" >
             </div>
 
             <div class="col-md-6 ">
@@ -203,28 +233,52 @@
               <input type="email" class="form-control InpusRegister" id="email" placeholder="example@gmail.com" >
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-4 col-sm-12">
+              <p class="PsRegister">País</p>
+              <input type="text" id="country" class="form-control InpusRegister" placeholder="1000445131" >
+            </div>
+            <div class="col-md-4">
+              <p class="PsRegister">Estado</p>
+              <input type="text" id="state" class="form-control InpusRegister" placeholder="1000445131" >
+            </div>
+            <div class="col-md-4">
+              <p class="PsRegister">Ciudad</p>
+              <input type="text" id="city" class="form-control InpusRegister" placeholder="1000445131" >
+            </div>
+
+            <div class="col-md-6">
               <p class="PsRegister">Crea tu contraseña</p>
               <input type="password" class="form-control InpusRegister" id="create_password" placeholder="··········" >
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-6">
               <p class="PsRegister">verifica tu contraseña</p>
               <input type="password" class="form-control InpusRegister" id="check_password" placeholder="··········" >
             </div>
             
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="border-radius: 10px;">
-              <label class="form-check-label" for="flexCheckDefault">
-                Acepto <a href="" class="Aregisters" >Terminos y Condiciones</a>
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked style="border-radius: 10px;">
-              <label class="form-check-label" for="flexCheckChecked">
-                Autorizo <a href="" class="Aregisters" >Tratamientos De Datos Personales</a> 
-              </label>
-            </div>
+
+<div class="row my-3">
+  <div class="col-md-6">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="termAndConditions" style="border-radius: 10px;">
+      <label class="form-check-label" for="flexCheckDefault">
+        Acepto <a href="" class="Aregisters" >Terminos y Condiciones</a>
+      </label>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="personalData" checked style="border-radius: 10px;">
+      <label class="form-check-label" for="flexCheckChecked">
+        Autorizo <a href="" class="Aregisters" >Tratamientos De Datos Personales</a> 
+      </label>
+    </div>
+  </div>
+
+</div>
+
+            
 
             <div class="col-md-12 text-center">
               <div class="loading">Loading</div>
@@ -232,7 +286,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
 
             </div>
-            <button class="ButtonRegister" type="submit">Crear tu cuenta</button>
+            <button class="ButtonRegister" type="submit" onclick="mostrar();">Crear tu cuenta</button>
 
           </div>
         </form>
@@ -362,5 +416,6 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="./assets/js/register-form.js"></script>
   </body>
 </html>
