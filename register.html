@@ -174,11 +174,11 @@
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <p class="PsRegister">ingresa tu nombre</p>
+              <p class="PsRegister">Ingresa tu nombre</p>
               <input type="text" id="name" class="form-control InpusRegister" placeholder="Your Name">
             </div>
             <div class="col-md-6">
-              <p class="PsRegister">ingresa tu apellido</p>
+              <p class="PsRegister">Ingresa tu apellido</p>
               <input type="text" id="last_name" class="form-control InpusRegister" placeholder="Your last Name" > 
             </div> 
 
@@ -212,10 +212,10 @@
       
       
       <div>
-        <input type="radio" id="hombre" name="gendern" class="zzz"  value="hombre" /><label for="gendern">Hombre</label>
+        <input type="radio" id="hombre" name="gendern" class=" me-2"  value="hombre" /><label for="gendern">Hombre</label>
       </div>
       <div>
-        <input type="radio" id="mujer" name="gendern" class="zzz" value="mujer" /><label for="gendern" >Mujer</label></div>
+        <input type="radio" id="mujer" name="gendern" class="zzz me-2" value="mujer" /><label for="gendern" >Mujer</label></div>
       </div>
       
     
@@ -224,36 +224,36 @@
 
 
             <div class="col-md-6">
-              <p class="PsRegister">numero de celular</p>
+              <p class="PsRegister">Número de celular</p>
               <input type="tel" class="form-control InpusRegister" id="phone_number" placeholder="3023159963" >
             </div>
 
             <div class="col-md-6 ">
-              <p class="PsRegister">correo electronico</p>
+              <p class="PsRegister">Correo electronico</p>
               <input type="email" class="form-control InpusRegister" id="email" placeholder="example@gmail.com" >
             </div>
 
             <div class="col-md-4 col-sm-12">
               <p class="PsRegister">País</p>
-              <input type="text" id="country" class="form-control InpusRegister" placeholder="1000445131" >
+              <input type="text" id="country" class="form-control InpusRegister" placeholder="Colombia" value="Colombia" disabled>
             </div>
             <div class="col-md-4">
-              <p class="PsRegister">Estado</p>
-              <input type="text" id="state" class="form-control InpusRegister" placeholder="1000445131" >
+              <p class="PsRegister">Departamento</p>
+              <input type="text" id="state" class="form-control InpusRegister" placeholder="Departamento residencia" >
             </div>
             <div class="col-md-4">
               <p class="PsRegister">Ciudad</p>
-              <input type="text" id="city" class="form-control InpusRegister" placeholder="1000445131" >
+              <input type="text" id="city" class="form-control InpusRegister" placeholder="Ciudad de residencia" >
             </div>
 
             <div class="col-md-6">
               <p class="PsRegister">Crea tu contraseña</p>
-              <input type="password" class="form-control InpusRegister" id="create_password" placeholder="··········" >
+              <input type="password" class="form-control InpusRegister" id="create_password" placeholder="······" >
             </div>
 
             <div class="col-md-6">
-              <p class="PsRegister">verifica tu contraseña</p>
-              <input type="password" class="form-control InpusRegister" id="check_password" placeholder="··········" >
+              <p class="PsRegister">Verifica tu contraseña</p>
+              <input type="password" class="form-control InpusRegister" id="check_password" placeholder="·······" >
             </div>
             
 
@@ -286,7 +286,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
 
             </div>
-            <button class="ButtonRegister" type="submit" onclick="mostrar();">Crear tu cuenta</button>
+            <button class="ButtonRegister" type="submit"  id="btnRegister">Crear tu cuenta</button>
 
           </div>
         </form>
@@ -419,3 +419,4 @@
 <script src="./assets/js/register-form.js"></script>
   </body>
 </html>
+
