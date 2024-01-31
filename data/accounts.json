@@ -4,11 +4,10 @@
         "account_number": "99990999099",
         "account_type": "Ahorros",
         "account_holder_name": "PEPO VUELAA GIRALDO",
-        "balance": 0.00,
         "currency": "COP",
         "last_transaction_date": null,
         "client_id":"123123123",
-        "transaction_history": []
+        "entity_finance": "Bancolombia"
       }
     ]
   }

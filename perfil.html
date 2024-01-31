@@ -470,17 +470,10 @@
             </div>
 
             <div class="text-center py-3">
-              <button type="button" class="btn btn-primary btn-md btn-Credito">PEDIR MI CREDITO</button>
+              <button id="btnPedirCredito" type="button" class="btn btn-primary btn-md btn-Credito" data-bs-toggle="modal" data-bs-target="#ModalInfoTarjeta">PEDIR MI CREDITO</button>
             </div>
       </div>
     </div>
-
-
-
-
-
-
-
     </div>
   </div>
 </section>
@@ -579,6 +572,92 @@
   </div>
 </footer><!-- End Footer -->
 
+<!-- MODAL FORMULARIO INFORMACION TARJETA -->
+<div class="modal fade" id="ModalInfoTarjeta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Información bancaria</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="table" name="bankInformation">
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Número cedula</label>
+            </div>
+            <div class="col-md-6">
+              <input name="idClient" id="idUser" type="text" min="0" class="form-control" value="" readonly>
+            </div>
+          </div>
+
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Tipo de cuenta</label>
+            </div>
+            <div class="col-md-6">
+              <select name="selectAccountUser" id="selectAccount" class="form-control">
+                <option value="" disabled selected>Tipo de cuenta</option>
+                <option value="ahorros">Ahorros</option>
+                <option value="corriente">Corriente</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Selecciona tu banco</label>
+            </div>
+            <div class="col-md-6">
+              <select name="selectBankUser" id="selectBank" class="form-control">
+                <option value="" disabled selected>Selecciona tu banco</option>
+                <option value="bancolombia">Bancolombia</option>
+                <option value="davivienda">Davivienda</option>
+              </select>
+            </div>
+          </div>
+
+
+         
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Número de cuenta</label>
+            </div>
+            <div class="col-md-6">
+              <input type="numeber" min="0" class="form-control">
+            </div>
+          </div>
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Nombre del titular de la cuenta</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnEnviar" type="button" class="btn btn-primary" style="background-color: #9200D7; border:none;" >Enviar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- FIN MODAL FORMULARIO INFORMACION TARJETA -->
+
+
+
+
+
+
+
+
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
@@ -597,3 +676,4 @@
   </body>
   
   </html>
+

@@ -37,3 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error('Se produjo un error al obtener los datos del archivo JSON:', error);
     });
 });
+
+
+let btnPedirCredito = document.getElementById('btnPedirCredito')
+
+fetch('http://localhost:3000/users')
+    .then (response => response.json())
+    .then (() =>{
+        let numberId = document.getElementById('idUser')
+        let id = localStorage.getItem('numberDocument')
+        numberId.value = id;
+    })
+        

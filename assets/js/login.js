@@ -13,7 +13,7 @@ function autenticatorUser() {
                 return (dataUser.email == emailLogin && dataUser.password == passwordLogin)
             })
             if (filtro.length > 0) {
-                localStorage.setItem('id',`${filtro[0].id}`)
+                localStorage.setItem('numberDocument',`${filtro[0].document}`)
                 window.location.href = 'perfil.html'
                 
             }
