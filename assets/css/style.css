@@ -2466,8 +2466,8 @@ section {
    border: 1px solid #9201D6 !important;}
    
 
-h2.TittleRegister {font-size: 30px; 
-  color:  #9201D6;
+h2.TittleRegister {font-size: 30px !important; 
+  color:  #9201D6 !important;
 }
 
 .BoxRegister{
@@ -2527,6 +2527,10 @@ h2.TittleRegister {font-size: 30px;
   border-radius: 20px;
 }
 
+.FlechaDeSubida:hover{
+background-color: #07d5c0;
+}
+
 .ButtonLoginIndex{
   background-color: #9200D7 !important;
   border-radius: 40px !important;
@@ -2539,9 +2543,75 @@ h2.TittleRegister {font-size: 30px;
 }
 
 .IconIdiom{
-  width:32px;height: auto; border-radius: 50%; /*! position:absolute; */top: 10%;left: 10px;top: calc(20% - 10px); z-index: 3;
+  width:32px;height: auto; 
+  border-radius: 50%; position:absolute;
+  top: 10%;
+  left: 10px;top: calc(20% - 10px); 
+  z-index: 3;
 }
 
+.RenacerEconomia{background: rgb(146,0,215);
+  background: linear-gradient(90deg, rgba(146,0,215,1) 30%, rgba(61,0,215,0) 100%); 
+  height: 3px; 
+  width: 50%;}
+
+/* ====== LOS ESTILOS DE PIPE DRIVE- SON DEL LOGIN  ========== */
+.blockText-01 {
+
+  flex-direction: column;
+  font-size: 2.1rem;
+  line-height: 2.5rem !important;
+}
+
+.blockText-01 .loginText {
+  display: block;
+  clear: both;
+  font-size: 3rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  color: #8501C4;
+  text-transform: uppercase;
+}
+
+/*stly box-logion*/
+.box-login {
+  background-color: #e6e6e6;
+  
+  border-radius: 30px;
+  -webkit-box-shadow: 3px 3px 7px -1px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 3px 3px 7px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 7px -1px rgba(0, 0, 0, 0.9);
+  width: 380px;
+}
+
+/*style btnlogin*/
+.buttonLogin{
+  background-color: #8501c4;
+  border: none;
+  color: #ffffff;
+}
+
+.title-registrarme{
+display: flex;
+flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    #about img {
+  /*background-color: rgb(214, 34, 17);*/
+  width: 100%;
+
+  }
+  .box-login{
+  width: 94%;
+  margin: 18px auto;
+  } 
+  .row-form-login{
+  flex-direction: column-reverse!important;
+  }
+}
+
+/* ======= END THE STYLES THE PIPEDRIVE =========== */
 
 /* ======= CODIGO DE ESTILO QUE HABIA EN EL INDEX ========= */
 .header {
@@ -2572,7 +2642,7 @@ h2.TittleRegister {font-size: 30px;
   color: #444444;
 }
 
-/*calculator*/
+/*==============calculator ==========*/
 .calculator {
   -webkit-box-shadow: inset 1px 2px 11px -2px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: inset 1px 2px 11px -2px rgba(0, 0, 0, 0.42);
@@ -2750,3 +2820,24 @@ input[type=range]:focus::-ms-fill-upper {
       transition: 0.3s;
     }
 
+/*  ======== ESTILOS EXTRAIDOS DEL REGISTER */
+
+/*.register-title-01{}*/
+.register-title-01 span{
+  font-size: 7rem;
+    color: #9201D6;
+    margin: 0;
+    font-weight: bold;
+    line-height: 6rem;
+  }
+
+  
+
+  @media only screen and (max-width: 600px) {
+    .register-title-01 span{
+      font-size: 5rem;
+      line-height: 5rem;
+    }
+    #contact img{width: 100%;}
+
+  }

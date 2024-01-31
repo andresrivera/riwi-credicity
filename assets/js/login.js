@@ -25,3 +25,19 @@ function autenticatorUser() {
     }
 
 btnIniciarSesion.onclick = autenticatorUser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
