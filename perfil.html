@@ -93,6 +93,148 @@
     margin-right: 10px;
     transition: 0.3s;
 }
+
+/*calculator*/
+.calculator-dataQ {
+      border-radius: 20px;
+    }
+    .calculator-dataD {
+      border-radius: 0px;
+    }
+
+    .textForm {
+      color: #9200D7 !important;
+    }
+
+    .btn-Credito {
+      background-color: #9200D7;
+      border: none;
+    }
+
+    .btn-Credito:hover {
+      background-color: white;
+      border: solid 1px #9200D7;
+      color: #9200D7;
+    }
+
+    form p {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 15px;
+    }
+
+    /*meses*/
+    .tiempoMeses{
+      font-size: 15px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .tiempoCredito{
+      font-size: 20px!important;
+    }
+
+    /*range*/
+    #valueSee{
+      font-size: 20px;
+    }
+    input[type=range] {
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 11px;
+      cursor: pointer;
+      box-shadow: 0px 0px 0px #4154f1;
+      background: #4154f1;
+      border-radius: 50px;
+      border: 1px solid #4154f1;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      box-shadow: 0px 0px 1px #9200d7;
+      border: 2px solid #ffffff;
+      height: 28px;
+      width: 13px;
+      border-radius: 9px;
+      background: #9200d7;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -10px;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #515fe0;
+    }
+
+    input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 11px;
+      cursor: pointer;
+      box-shadow: 0px 0px 0px #515fe0;
+      background: #515fe0;
+      border-radius: 50px;
+      border: 1px solid #515fe0;
+    }
+
+    input[type=range]::-moz-range-thumb {
+      box-shadow: 0px 0px 1px #9200d7;
+      border: 2px solid #ffffff;
+      height: 28px;
+      width: 13px;
+      border-radius: 9px;
+      background: #9200d7;
+      cursor: pointer;
+    }
+
+    input[type=range]::-ms-track {
+      width: 100%;
+      height: 11px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    input[type=range]::-ms-fill-lower {
+      background: #515fe0;
+      border: 1px solid #515fe0;
+      border-radius: 100px;
+      box-shadow: 0px 0px 0px #515fe0;
+    }
+
+    input[type=range]::-ms-fill-upper {
+      background: #515fe0;
+      border: 1px solid #515fe0;
+      border-radius: 100px;
+      box-shadow: 0px 0px 0px #515fe0;
+    }
+
+    input[type=range]::-ms-thumb {
+      box-shadow: 0px 0px 1px #9200d7;
+      border: 2px solid #ffffff;
+      height: 28px;
+      width: 13px;
+      border-radius: 9px;
+      background: #9200d7;
+      cursor: pointer;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+      background: #515fe0;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+      background: #515fe0;
+    }
+
+
+
+    /*end range*/
   </style>
 
 </head>
@@ -139,14 +281,14 @@
             
             <div style="position: relative;" class="p-0">
               <div class="py-4" style="background-color: #9200D7; position: relative; padding-left:170px;border-radius: 12px 12px 0 0;min-height: 120px;">
-                <h3 style="color:#ffffff;">Santiago Monà</h3>
+                <h3 style="color:#ffffff;" id="p_user_name">Santiago Monà</h3>
                 <p style="color: #ffffff;">tu membresia de credicity</p>
               </div>
               
               <div class="py-3" style="background-color: #DFDFDF; position: relative; padding-left:170px;border-radius: 0px 0px 12px 12px;min-height: 80px;">
                 <p>editar perfil</p>
               </div>
-              <img style="width:150px;height: auto; border-radius: 50%; position:absolute;top: 10%;left: 10px;top: calc(20% - 10px); z-index: 3;"  src="assets/img/carnet.jpg" alt="">
+              <img id="p_user_pic" style="width:150px;height: auto; border-radius: 50%; position:absolute;top: 10%;left: 10px;top: calc(20% - 10px); z-index: 3;"  src="assets/img/carnet.jpg" alt="">
               
             </div>
 
@@ -155,8 +297,8 @@
           <div class="col-md-2 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="d-flex flex-column justify-content-center align-items-center m-0" style="height: 100%;background: #dfdfdf; min-height: 200px;border-radius: 12px;">
               <h3>Nivel</h3>
-              <img class="img-fluid" style="height: auto;" src="assets/img/diamante2.png" alt="">
-              <p style="position: absolute;">turquesa</p>
+              <img id="p_user_levelImg" class="img-fluid" style="height: auto;" src="assets/img/diamante2.png" alt="">
+              <p id="p_user_levelName" style="position: absolute;">turquesa</p>
             </div>
           </div>
 
@@ -165,7 +307,7 @@
 
               <div class="w-100 d-flex flex-column justify-content-center align-items-center m-0" style="background-color: #DFDFDF; position: relative; border-radius: 12px 12px 0 0;min-height: 120px;min-height: 120px;">
                 <p style="color: #000000;">Cupo Disponible</p>
-                <h3 style="color:#000000;" id="valorCredito">$ 250,000</h3>
+                <h3 style="color:#000000;" id="p_user_quota">$ 250,000</h3>
               </div>
               <a class="w-100 d-flex justify-content-center align-items-center m-0" style="background-color: #9200D7; position: relative;border-radius: 0px 0px 12px 12px;min-height: 80px;color: #fff;">Solicitalo ya!</a>
             </div>
@@ -214,155 +356,136 @@
 
     </section><!-- End Values Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts" style="display:none;">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <style>
-            .menuu{list-style: none; display: flex; flex-direction: row; }
-          </style>
-          <ul class="menuu">
-            <li>Mona 1</li>
-            <li>Mona 1</li>
-            <li>Mona 1</li>
-            <li>Mona 1</li>
-          </ul>
-        </div>
+ 
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center pt-0">
 
-        <div class="row gy-4">
+<div class="container">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div>
-                <button class="myBtn" type="button">pide tu credito</button>
+  <div class="row" id="formCalculator">
+    <div class="col-md-6 d-flex flex-column justify-content-top ">
+      <div class="border bg-white rounded-lg py-3 px-3 px-lg-5 calculator">
+        <h1 class="text-center pt-2 textForm">Calcule su crédito</h1>
+            <p class="t9 text-body mb-4 text-center mt-4" id="valueSee"></p>
+
+            <div class="d-flex align-items-center justify-content-between pb-3">
+              <p>$ 200.000</p>
+              <div class="flex-fill px-5 px-lg-5">
+                <span id=""></span>
+                <input type="range" min="200000" max="5000000" step="10000" value="250000" id="range"
+                  class="w-100 rangeColor">
+              </div>
+              <p>$ 5'000.000</p>
+            </div>
+            <h1 class="text-center pt-2 mb-3 textForm tiempoCredito">Tiempo en meses</h1>
+
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center justify-content-center">
+                  <input type="radio" name="cuotasCredito" value="1" class="me-2">
+                  <label for="" class="tiempoMeses">1</label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center justify-content-center">
+                  <input type="radio" name="cuotasCredito" value="2" class="me-2">
+                  <label for="" class="tiempoMeses">2</label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center justify-content-center">
+                  <input type="radio" value="3" name="cuotasCredito" class="me-2">
+                  <label for="" class="tiempoMeses">3</label>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div>
-                <button class="myBtn" >realizar pagos</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div>
-                <button class="myBtn"  type="button">tu coins credicity</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <div>
-                <button class="myBtn"  type="button">tu coins credicity</button>
-              </div>
-            </div>
-          </div>
-          <style>
-            .myBtn{background-color: #9200D7;color: #ffffff;border-radius: 30px;height: 70px;width: 200px;}
-          </style>
-        </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </div>
 
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <div class="border bg-white rounded-lg py-3 px-3 px-lg-5 calculator">
+        <h1 class="text-center pt-4 mb-3 textForm">Su plan de pago</h1>
 
-<section id="contact" class="contact" style="padding: 10px 0 60px 0;">
+            <div class="d-grid">
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="text-body mb-2 text-center">Monto:</p>
+                </div>
 
-  <div class="container" data-aos="fade-up">
+                <div class="col-md-6">
+                  <p id="totalMonto"></p>
+                </div>
+              </div>
 
+              <div class="row">
+                <div class="col-md-6">
 
-    <div class="row gy-4">
-      <div class="col-lg-6">
-        
+                  <p class="text-body mb-2 text-center">Cantidad de cuotas:</p>
+                </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" style="background-color: #EEEEEE;border-radius: 20px;">
-          <header class="section-header">
-            <h2 style="font-size: 30px; color:  #9201D6;">Crea tu cuenta</h2>
-          </header>
-          <div class="row gy-4">
+                <div class="col-md-6">
+                  <p id="totalCuotas">
 
-            <div class="col-md-6">
-              <p style="margin: 0;color: #000000;">ingresa tu nombre</p>
-              <input type="text" id="name" class="form-control" placeholder="Your Name" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-            </div>
-            <div class="col-md-6">
-              <p style="margin: 0;color: #000000;">ingresa tu apellido</p>
-              <input type="text" id="last_name" class="form-control" placeholder="Your last Name" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'"> 
-            </div> 
-            <div class="col-md-6">
-              <p style="margin: 0;color: #000000;" >tipo de documento</p>
-              <select class="form-select" id="type_document" id="type_document" style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-                <option value="cedula">cedula de ciudadania </option>
-                <option value="pasaporte">pasaporte</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <p style="margin: 0;color: #000000;">numero de documento</p>
-              <input type="text" id="document" class="form-control" placeholder="1000445131" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-            </div>
+                  </p>
+                </div>
+              </div>
 
-            <div class="col-md-6">
-              <p style="margin: 0;color: #000000;">numero de celular</p>
-              <input type="number" class="form-control" id="number_phone" placeholder="3023159963" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-            </div>
+              <div class="row">
+                <div class="col-md-6">
 
-            <div class="col-md-6 ">
-              <p style="margin: 0;color: #000000;">correo electronico</p>
-              <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-            </div>
+                  <p class="text-body mb-2 text-center">Valor cuota mensual:</p>
+                </div>
 
-            <div class="col-md-12">
-              <p style="margin: 0;color: #000000;">Crea tu contraseña</p>
-              <input type="password" class="form-control" id="create_password" placeholder="··········" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-            </div>
+                <div class="col-md-6">
+                  <p id="valorCuota"></p>
+                </div>
 
-            <div class="col-md-12">
-              <p style="margin: 0; color: #000000; ">verifica tu contraseña</p>
-              <input type="password" class="form-control" id="check_password" placeholder="··········" required style="border-radius: 10px;" onfocus="this.style.border='2px solid #9200D7'">
-            </div>
-            
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="border-radius: 10px;">
-              <label class="form-check-label" for="flexCheckDefault">
-                Acepto <a href="" style="color: #9200D7;" >Terminos y Condiciones</a>
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked style="border-radius: 10px;">
-              <label class="form-check-label" for="flexCheckChecked">
-                Autorizo <a href="" style="color: #9200D7;" >Tratamientos De Datos Personales</a> 
-              </label>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+
+                  <p class="text-body mb-2 text-center">Total intereses: </p>
+                </div>
+
+                <div class="col-md-6">
+                  <p id="totalIntereses"></p>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="text-body mb-2 text-center">Total pagar: </p>
+                </div>
+
+                <div class="col-md-6">
+                  <p id="totalPagar"></p>
+                </div>
+              </div>
             </div>
 
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
+            <div class="text-center py-3">
+              <button type="button" class="btn btn-primary btn-md btn-Credito">PEDIR MI CREDITO</button>
             </div>
-            <button style="border-radius: 55px; background-color: #9201D6;" type="submit">Crear tu cuenta</button>
-
-          </div>
-        </form>
-
       </div>
-      <div class="col-lg-6">
-        <div style="background-color: #EEEEEE;border-radius: 20px;">
-          <header class="section-header">
-            <h2 style="font-size: 30px; color:  #313131;">Información de Tu Crédito</h2>
-          </header>
-          <div class="row gy-4"></div>
-          </div>
-      </div>
+    </div>
 
+
+
+
+
+
+
+    </div>
   </div>
+</section>
 
-</section><!-- End Contact Section -->
+<!-- End Contact Section -->
 </main>
 <!--  -->
 
@@ -469,6 +592,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/calculator.js"></script>
   </body>
   
   </html>
