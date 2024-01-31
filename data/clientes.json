@@ -16,6 +16,23 @@
       "city": "medellin",
       "password": "123456",
       "created_at": "1/30/2024"
+    },
+    {
+      "id": "1b65",
+      "name": "Felipe",
+      "last_name": "Restrepo",
+      "gender": "hombre",
+      "birthday": "1999-10-29",
+      "email": "felipelipe@gmail.com",
+      "phone": "3004564562",
+      "document_type": "cedula",
+      "document": "100010001",
+      "expedition_date": "2016-10-15",
+      "country": "Colombia",
+      "state": "putumayo",
+      "city": "mocoa",
+      "password": "7777777",
+      "created_at": "11/25/2024"
     }
   ]
 }
