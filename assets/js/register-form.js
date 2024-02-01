@@ -2,7 +2,7 @@
 const tiempoTranscurrido = Date.now();
 const hoy = new Date(tiempoTranscurrido);
 hoy.toLocaleDateString();
-console.log(hoy);
+
 
 //let termAndConditions = document.getElementById("termAndConditions");
 //let personalData = document.getElementById("personalData");
@@ -49,7 +49,5 @@ function addNewUser (){
     })
     .then((response) => response.json())
     .then(data =>{console.log(data);})
-    console.log(create_password);
 }
 btnRegister.onclick = addNewUser
-
