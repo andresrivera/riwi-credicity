@@ -1,7 +1,7 @@
 {
   "loan_details": [
     {
-      "documento_cliente": "1000445131",
+      "id": "1000445131",
       "credit_data": [
         {
           "loan_id": "CL-001",
@@ -23,8 +23,7 @@
           "valor_cuota": 625,
           "total_a_pagar": 15000
         }
-      ],
-      "id": "380d"
+      ]
     },
     {
       "documento_cliente": "100010001",
@@ -39,8 +38,7 @@
           "valor_cuota": 625,
           "total_a_pagar": 15000
         }
-      ],
-      "id": "4c9c"
+      ]
     },
     {
       "id": "32c1",
@@ -57,6 +55,58 @@
       "cuotas": "2",
       "valor_cuota": "COP 1,889,292.00",
       "total_pagar": "COP 3,778,584.00"
+    },
+    {
+      "id": "2309",
+      "total_capital": "COP 2,070,000.00",
+      "fecha_solicitud": "2/1/2024",
+      "cuotas": "2",
+      "valor_cuota": "COP 1,123,803.00",
+      "total_pagar": "COP 2,247,606.00"
+    },
+    {
+      "id": "495e",
+      "total_capital": "COP 3,840,000.00",
+      "fecha_solicitud": "2/1/2024",
+      "cuotas": "3",
+      "moneda": "COP",
+      "cuotas_faltantes": {},
+      "valor_cuota": "COP 1,444,736.00",
+      "total_intereses": "COP 494,208.00",
+      "total_pagar": "COP 4,334,208.00"
+    },
+    {
+      "id": "55a9",
+      "total_capital": "COP 2,910,000.00",
+      "fecha_solicitud": "2/1/2024",
+      "cuotas": "2",
+      "moneda": "COP",
+      "cuotas_faltantes": "2",
+      "valor_cuota": "COP 1,579,839.00",
+      "total_intereses": "COP 249,678.00",
+      "total_pagar": "COP 3,159,678.00"
+    },
+    {
+      "id": "a75d",
+      "total_capital": "COP 1,690,000.00",
+      "fecha_solicitud": "2/1/2024",
+      "cuotas": "2",
+      "moneda": "COP",
+      "cuotas_faltantes": "2",
+      "valor_cuota": "COP 917,501.00",
+      "total_intereses": "COP 145,002.00",
+      "total_pagar": "COP 1,835,002.00"
+    },
+    {
+      "id": "c1d9",
+      "total_capital": "COP 2,390,000.00",
+      "fecha_solicitud": "2/1/2024",
+      "cuotas": "3",
+      "moneda": "COP",
+      "cuotas_faltantes": "3",
+      "valor_cuota": "COP 899,197.67",
+      "total_intereses": "COP 307,593.00",
+      "total_pagar": "COP 2,697,593.00"
     }
   ]
 }

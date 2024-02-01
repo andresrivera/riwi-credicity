@@ -39,6 +39,7 @@
 
 let btnPedirCredito = document.getElementById('btnPedirCredito')
 let btnEnviar = document.getElementById('btnEnviar')
+let btnLogOut = document.getElementById('btnLogOut')
 
 let totalMontoP = document.getElementById('totalMonto')
 let totalCuotasP = document.getElementById('totalCuotas')
@@ -78,11 +79,14 @@ btnPedirCredito.addEventListener('click', ()=>{
         fecha_solicitud: hoy.toLocaleDateString(),
         //fecha_finalizacion: totalDias,
         cuotas: totalCuotasP.textContent,
+        moneda: 'COP',
+        cuotas_faltantes: totalCuotasP.textContent,
         valor_cuota: valorCuotaP.textContent,
+        total_intereses: totalInteresesP.textContent,
         total_pagar: totalPagarP.textContent,
     }
 
-    fetch('http://localhost:3001/loan_details',{
+    fetch('http://localhost:3002/loan_details',{
         method: "POST",
         body: JSON.stringify(infoCredit),
         headers: {'Content-type': 'application/json'}
@@ -90,5 +94,14 @@ btnPedirCredito.addEventListener('click', ()=>{
     .then((response)=>{response.json()})
     .catch(data =>{console.log(data);})
 });
-        
 
+btnLogOut.addEventListener('click', ()=>{
+    localStorage.removeItem('active')
+})
+
+function sesionOpen (){
+    if (localStorage.getItem('active')==true){
+        
+    }
+
+}

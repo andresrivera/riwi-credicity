@@ -14,6 +14,7 @@ function autenticatorUser() {
             })
             if (filtro.length > 0) {
                 localStorage.setItem('numberDocument',`${filtro[0].document}`)
+                localStorage.setItem('active', 'true')
                 window.location.href = 'perfil.html'
                 
             }
