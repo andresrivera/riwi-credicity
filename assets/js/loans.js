@@ -1,11 +1,12 @@
-
+  /* FUNCIONES Y VARIABLES PARA LA CREACION DE LA TABLA */
+  
   let variable = localStorage.setItem("numerDocument","1000445131")
 
   let documentoDesdeLocal = localStorage.getItem("numerDocument");
 
   let tablaId = document.getElementById("credits_table");
 
-fetch("http://localhost:3000/loan_details", { method: 'GET', headers: { "content-type": "application/json" } }
+fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content-type": "application/json" } }
   )
   .then(response => {return response.json() ;
   }).then(data=>{
@@ -59,10 +60,19 @@ fetch("http://localhost:3000/loan_details", { method: 'GET', headers: { "content
       }); 
   })
 
+/* ==========FUNCION LA COLOCACION DEL NOMBRE============= */
+let nombreDelUsuario = document.getElementById("NombreUsuario")
 
-  fetch("http://localhost:3000/loan_details", { method: 'GET', headers: { "content-type": "application/json" } }
-  )
-  .then(response => {return response.json() ;
-  }).then(data=>{})
+fetch("http://localhost:3000/users", { method: 'GET', headers: { "content-type": "application/json" } }
+)
+.then(response => {return response.json() ;
+}).then(data=>{
+  data.forEach((usuario)=>{
+
+    if(documentoDesdeLocal==usuario.document){
+      nombreDelUsuario.innerHTML = usuario.name + " " + usuario.last_name;
+    }
+  })
+})
 
 
