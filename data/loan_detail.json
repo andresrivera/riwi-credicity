@@ -42,6 +42,36 @@
           "valor_cuota": "COP 1,340,963.00",
           "total_intereses": "COP 211,926.00",
           "total_pagar": "COP 2,681,926.00"
+        },
+        {
+          "total_capital": "COP 2,380,000.00",
+          "fecha_solicitud": "2/2/2024",
+          "cuotas": "2",
+          "moneda": "COP",
+          "cuotas_faltantes": "2",
+          "valor_cuota": "COP 1,292,102.00",
+          "total_intereses": "COP 204,204.00",
+          "total_pagar": "COP 2,584,204.00"
+        },
+        {
+          "total_capital": "COP 2,380,000.00",
+          "fecha_solicitud": "2/2/2024",
+          "cuotas": "2",
+          "moneda": "COP",
+          "cuotas_faltantes": "2",
+          "valor_cuota": "COP 1,292,102.00",
+          "total_intereses": "COP 204,204.00",
+          "total_pagar": "COP 2,584,204.00"
+        },
+        {
+          "total_capital": "COP 2,380,000.00",
+          "fecha_solicitud": "2/2/2024",
+          "cuotas": "2",
+          "moneda": "COP",
+          "cuotas_faltantes": "2",
+          "valor_cuota": "COP 1,292,102.00",
+          "total_intereses": "COP 204,204.00",
+          "total_pagar": "COP 2,584,204.00"
         }
       ]
     },

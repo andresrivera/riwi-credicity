@@ -49,7 +49,7 @@ let totalPagarP = document.getElementById('totalPagar')
 
 
 //agregar el id del cliente al modal
-fetch('http://localhost:3000/users')
+fetch('http://localhost:3001/users')
 .then (response => response.json())
 .then (() =>{
     let numberId = document.getElementById('idUser')
@@ -71,7 +71,6 @@ let documentUser = localStorage.getItem('numberDocument')
 /* let numberDocument = {
     id:documentUser
 }
-
 fetch(`http://localhost:3001/loan_details`,{
         method: "POST",
         body: JSON.stringify(numberDocument),
@@ -79,17 +78,10 @@ fetch(`http://localhost:3001/loan_details`,{
     })
     .then((response)=>{response.json()})
     .then(data =>{
-
-
-
-
-
     }) */
 
 
-
-
-fetch (`http://localhost:3001/loan_details/${documentUser}`)
+fetch (`http://localhost:3000/loan_details/${documentUser}`)
 .then(response=>response.json())
 .then(data=>{
 
@@ -110,7 +102,7 @@ fetch (`http://localhost:3001/loan_details/${documentUser}`)
         credit_data : data.credit_data
     }
 
-    fetch(`http://localhost:3001/loan_details/${(documentUser)}`,{
+    fetch(`http://localhost:3000/loan_details/${(documentUser)}`,{
     method: "PATCH",
     body : JSON.stringify(nuevo_registro),
     headers:{

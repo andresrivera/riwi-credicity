@@ -6,7 +6,7 @@ function autenticatorUser() {
     let passwordLogin = document.getElementById('passwordLogin').value;
     let InfoIncorrecta = document.getElementById('InfoIncorrecta')
 
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:3001/users')
         .then (response => response.json())
         .then (data => {
             filtro = data.filter (function(dataUser){
