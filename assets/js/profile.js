@@ -49,7 +49,7 @@ let totalPagarP = document.getElementById('totalPagar')
 
 
 //agregar el id del cliente al modal
-fetch('http://localhost:3001/users')
+fetch('http://localhost:3000/users')
 .then (response => response.json())
 .then (() =>{
     let numberId = document.getElementById('idUser')
@@ -79,43 +79,73 @@ fetch(`http://localhost:3001/loan_details`,{
     .then((response)=>{response.json()})
     .then(data =>{
     }) */
+fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
 
 
-fetch (`http://localhost:3000/loan_details/${documentUser}`)
-.then(response=>response.json())
-.then(data=>{
+        resultado = d.filter(function(element){
+            return element.id == documentUser
+        });
+        nuevo_credito ={
+            total_capital: totalMontoP.textContent,
+            fecha_solicitud: hoy.toLocaleDateString(),
+            cuotas: totalCuotasP.textContent,
+            moneda: 'COP',
+            cuotas_faltantes: totalCuotasP.textContent,
+            valor_cuota: valorCuotaP.textContent,
+            total_intereses: totalInteresesP.textContent,
+            total_pagar: totalPagarP.textContent
+        }
+        if(resultado.length > 0){
+            //start
+            
+            fetch (`http://localhost:3001/loan_details/${documentUser}`)
+            .then(response=>response.json())
+            .then(data=>{
+                console.log(data);
+                if(data != ""){
+                    alert("nice"); 
+                    data.credit_data.push(nuevo_credito);
+                    //creo un nuevo objeto
+                    nuevo_registro ={
+                        credit_data : data.credit_data
+                    }
+                
+                    fetch(`http://localhost:3001/loan_details/${(documentUser)}`,{
+                    method: "PATCH",
+                    body : JSON.stringify(nuevo_registro),
+                    headers:{
+                        "Content-Type" : "application/json"
+                    }
+                    })
+                    .then(r => r.json())
+                    .then(d => {
+                        
+                    }); 
+                } });
+                // end
+        }else{
+            nuevo_registro ={
+                id: documentUser,
+                credit_data : [nuevo_credito]
+            }
+            fetch(`http://localhost:3001/loan_details`,{
+            method: "POST",
+            body : JSON.stringify(nuevo_registro),
+            headers:{
+                "Content-Type" : "application/json"
+            }
+            })
+            .then(r => r.json())
+            .then(d => {
+                
+            }); 
+        }
 
-    nuevo_credito ={
-        total_capital: totalMontoP.textContent,
-        fecha_solicitud: hoy.toLocaleDateString(),
-        cuotas: totalCuotasP.textContent,
-        moneda: 'COP',
-        cuotas_faltantes: totalCuotasP.textContent,
-        valor_cuota: valorCuotaP.textContent,
-        total_intereses: totalInteresesP.textContent,
-        total_pagar: totalPagarP.textContent
-    }
+})
 
-    data.credit_data.push(nuevo_credito);
-    //creo un nuevo objeto
-    nuevo_registro ={
-        credit_data : data.credit_data
-    }
 
-    fetch(`http://localhost:3000/loan_details/${(documentUser)}`,{
-    method: "PATCH",
-    body : JSON.stringify(nuevo_registro),
-    headers:{
-        "Content-Type" : "application/json"
-    }
-    })
-    .then(r => r.json())
-    .then(d => {
-        
-        });  
-    });
 
-});
+}); 
 
 
 
@@ -123,6 +153,7 @@ fetch (`http://localhost:3000/loan_details/${documentUser}`)
 btnLogOut.addEventListener('click', ()=>{
     localStorage.removeItem('active')
     localStorage.removeItem('numberDocument');
+    localStorage.removeItem('id')
 })
 
 function sesionOpen (){

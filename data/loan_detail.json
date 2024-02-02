@@ -76,7 +76,29 @@
       ]
     },
     {
-      "id": "100010001"
+      "id": "100010001",
+      "credit_data": [
+        {
+          "total_capital": "COP 3,470,000.00",
+          "fecha_solicitud": "2/2/2024",
+          "cuotas": "2",
+          "moneda": "COP",
+          "cuotas_faltantes": "2",
+          "valor_cuota": "COP 1,883,863.00",
+          "total_intereses": "COP 297,726.00",
+          "total_pagar": "COP 3,767,726.00"
+        },
+        {
+          "total_capital": "COP 1,540,000.00",
+          "fecha_solicitud": "2/2/2024",
+          "cuotas": "3",
+          "moneda": "COP",
+          "cuotas_faltantes": "3",
+          "valor_cuota": "COP 579,399.33",
+          "total_intereses": "COP 198,198.00",
+          "total_pagar": "COP 1,738,198.00"
+        }
+      ]
     }
   ]
 }

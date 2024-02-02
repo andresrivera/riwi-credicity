@@ -1,6 +1,6 @@
   /* FUNCIONES Y VARIABLES PARA LA CREACION DE LA TABLA */
   
-  let variable = localStorage.setItem("numerDocument","1000445131")
+  //let variable = localStorage.setItem("numerDocument","1000445131")
 
   let documentoDesdeLocal = localStorage.getItem("numerDocument");
 
