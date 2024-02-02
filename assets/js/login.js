@@ -15,7 +15,7 @@ function autenticatorUser() {
             if (filtro.length > 0) {
                 localStorage.setItem('numberDocument',`${filtro[0].document}`)
                 localStorage.setItem('active', 'true')
-                window.location.href = 'perfil.html'
+                location.href = `perfil.html`
                 
             }
             else {
@@ -23,10 +23,11 @@ function autenticatorUser() {
                 InfoIncorrecta.innerHTML = 'Usuario y/o contraseña incorrectos'
             }
         })
+        
     }
+    
 
 btnIniciarSesion.onclick = autenticatorUser
-
 
 
 

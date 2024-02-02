@@ -62,46 +62,82 @@ const tiempoTranscurrido = Date.now();
 const hoy = new Date(tiempoTranscurrido);
 hoy.toLocaleDateString();
 
-btnPedirCredito.addEventListener('click', ()=>{
-    
-   /*  if (totalCuotasP.textContent === "1"){
-        return totalDias = "30"
-    }
-    else if (totalCuotasP.textContent === "2"){
-        return totalDias = "60"
-    }
-    else if (totalCuotasP.textContent === "3"){
-        return totalDias = "90"
-    }    */
+/* ============== ENVIAR DATOS A LA BASE DE DATOS LOAN_DETAILS ============= */
 
-    let infoCredit = {
+btnPedirCredito.addEventListener('click', ()=>{
+
+let documentUser = localStorage.getItem('numberDocument')
+
+/* let numberDocument = {
+    id:documentUser
+}
+
+fetch(`http://localhost:3001/loan_details`,{
+        method: "POST",
+        body: JSON.stringify(numberDocument),
+        headers: {'Content-type': 'application/json'}
+    })
+    .then((response)=>{response.json()})
+    .then(data =>{
+
+
+
+
+
+    }) */
+
+
+
+
+fetch (`http://localhost:3001/loan_details/${documentUser}`)
+.then(response=>response.json())
+.then(data=>{
+
+    nuevo_credito ={
         total_capital: totalMontoP.textContent,
         fecha_solicitud: hoy.toLocaleDateString(),
-        //fecha_finalizacion: totalDias,
         cuotas: totalCuotasP.textContent,
         moneda: 'COP',
         cuotas_faltantes: totalCuotasP.textContent,
         valor_cuota: valorCuotaP.textContent,
         total_intereses: totalInteresesP.textContent,
-        total_pagar: totalPagarP.textContent,
+        total_pagar: totalPagarP.textContent
     }
 
-    fetch('http://localhost:3002/loan_details',{
-        method: "POST",
-        body: JSON.stringify(infoCredit),
-        headers: {'Content-type': 'application/json'}
+    data.credit_data.push(nuevo_credito);
+    //creo un nuevo objeto
+    nuevo_registro ={
+        credit_data : data.credit_data
+    }
+
+    fetch(`http://localhost:3001/loan_details/${(documentUser)}`,{
+    method: "PATCH",
+    body : JSON.stringify(nuevo_registro),
+    headers:{
+        "Content-Type" : "application/json"
+    }
     })
-    .then((response)=>{response.json()})
-    .catch(data =>{console.log(data);})
+    .then(r => r.json())
+    .then(d => {
+        
+        });  
+    });
+
 });
+
+
+
 
 btnLogOut.addEventListener('click', ()=>{
     localStorage.removeItem('active')
+    localStorage.removeItem('numberDocument');
 })
 
 function sesionOpen (){
-    if (localStorage.getItem('active')==true){
-        
-    }
-
+    let sesion = localStorage.getItem('active');
+    if (!sesion){
+        location.href = 'login.html'
+    } 
 }
+sesionOpen()
+
