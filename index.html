@@ -32,7 +32,7 @@
 
 </head>
 
-<body>
+<body id="home">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
@@ -45,12 +45,12 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">¿Quíenes somos?</a></li>
-          <li><a class="nav-link scrollto" href="#services">¿Cómo funciona?</a></li>
+          <li><a class="nav-link scrollto active textBoxL-1" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto textBoxL-2" href="#about">¿Quíenes somos?</a></li>
+          <li><a class="nav-link scrollto textBoxL-3" href="#services">¿Cómo funciona?</a></li>
 
-          <li><a class="getstarted scrollto ButtonLoginIndex" href="login.html" >login/Register</a></li>
-          <li><a class="nav-link scrollto" href="#">
+          <li><a class="getstarted scrollto ButtonLoginIndex textBoxL-4" href="login.html" >  Login/registro</a></li>
+          <li><a  id="language-link" class="nav-link scrollto" href="#">
             <img  class="IconIdiom" alt="" src="assets/img/United-kingdom_flag_icon_round.svg.png">
           </a></li>
         </ul>
@@ -74,7 +74,7 @@
 
             <div class="border bg-white rounded-lg py-5 px-3 px-lg-5 calculator">
 
-              <h1 class="text-center pt-2 textForm">Calcule su crédito</h1>
+              <h1 class="text-center pt-2 textForm  textBoxL-5">Calcule su crédito</h1>
               <p class="t9 text-body mb-4 text-center mt-4" id="valueSee"></p>
 
               <div class="d-flex align-items-center justify-content-between pb-3">
@@ -86,7 +86,7 @@
                 </div>
                 <p>$ 5'000.000</p>
               </div>
-              <h1 class="text-center pt-2 mb-3 textForm tiempoCredito">Tiempo en meses</h1>
+              <h1 class="text-center pt-2 mb-3 textForm tiempoCredito  textBoxL-6">Tiempo en meses</h1>
 
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4">
@@ -116,12 +116,12 @@
               </div> -->
 
 
-              <h1 class="text-center pt-4 mb-3 textForm">Su plan de pago</h1>
+              <h1 class="text-center pt-4 mb-3 textForm  textBoxL-7">Su plan de pago</h1>
 
               <div class="d-grid">
                 <div class="row">
                   <div class="col-md-6">
-                    <p class="text-body mb-2 text-center">Monto:</p>
+                    <p class="text-body mb-2 text-center  textBoxL-8">Monto:</p>
                   </div>
 
                   <div class="col-md-6">
@@ -132,7 +132,7 @@
                 <div class="row">
                   <div class="col-md-6">
 
-                    <p class="text-body mb-2 text-center">Cantidad de cuotas:</p>
+                    <p class="text-body mb-2 text-center  textBoxL-9">Cantidad de cuotas:</p>
                   </div>
 
                   <div class="col-md-6">
@@ -145,7 +145,7 @@
                 <div class="row">
                   <div class="col-md-6">
 
-                    <p class="text-body mb-2 text-center">Valor cuota mensual:</p>
+                    <p class="text-body mb-2 text-center  textBoxL-10">Valor cuota mensual:</p>
                   </div>
 
                   <div class="col-md-6">
@@ -157,7 +157,7 @@
                 <div class="row">
                   <div class="col-md-6">
 
-                    <p class="text-body mb-2 text-center">Total intereses: </p>
+                    <p class="text-body mb-2 text-center  textBoxL-11">Total intereses: </p>
                   </div>
 
                   <div class="col-md-6">
@@ -168,7 +168,7 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <p class="text-body mb-2 text-center">Total pagar: </p>
+                    <p class="text-body mb-2 text-center  textBoxL-12">Total pagar: </p>
                   </div>
 
                   <div class="col-md-6">
@@ -178,7 +178,7 @@
               </div>
 
               <div class="text-center py-3">
-                <button type="button" class="btn btn-primary btn-md btn-Credito" onclick="location.href='login.html'" >PEDIR MI CREDITO</button>
+                <button type="button" class="btn btn-primary btn-md btn-Credito   textBoxL-13" onclick="location.href='login.html'" >PEDIR MI CREDITO</button>
               </div>
 
             </div>
@@ -186,13 +186,13 @@
         </div>
 
         <div class="col-md-6 d-flex flex-column justify-content-center align-items-end">
-          <h1 class="d-flex align-item-end SolicitCredito" data-aos="fade-up">SOLICITA TU <br> PRESTAMO</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">EN LINEA</h2>
+          <h1 class="d-flex align-item-end SolicitCredito  textBoxL-13" data-aos="fade-up">SOLICITA TU <br> PRESTAMO</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400" class=" textBoxL-14">EN LINEA</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
               <a href="login.html"
                 class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center MiPrincipalButon">
-                <span>Solicitalo ya!</span>
+                <span class=" textBoxL-15">Solicitalo ya!</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -536,6 +536,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/calculator.js"></script>
+  <script src="./assets/js/babel.js"></script>
 </body>
 
 </html>
