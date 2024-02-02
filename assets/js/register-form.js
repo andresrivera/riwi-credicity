@@ -51,3 +51,25 @@ function addNewUser (){
     .then(data =>{console.log(data);})
 }
 btnRegister.onclick = addNewUser
+
+/* =================== FUNCIONALIDAD DE VERIFICAR SI TODOS LOS INPUS ESTAN LLENOS ================= */
+function login() {
+
+    if (! gmail.value.match(mailformat) ) {
+        advertencia.innerHTML=" HEMOS ENTRADO "
+
+    }
+     if(gmail){
+        let advertencia = document.getElementById("advertencia")
+        gmail.classList.add("is-valid")
+        advertencia.innerHTML="el correo o la contraseña no coinciden"
+    } 
+    userscounts.forEach(function(user) {
+        if (gmail.value===user.gmail && pasword.value===user.pasword) {
+            sessionStorage.setItem('nombre',user.name);
+            location.href = "pages/home.html";
+            
+        }
+    })
+
+}
