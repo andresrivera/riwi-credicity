@@ -41,11 +41,20 @@ let btnPedirCredito = document.getElementById('btnPedirCredito')
 let btnEnviar = document.getElementById('btnEnviar')
 let btnLogOut = document.getElementById('btnLogOut')
 
+//==== DATOS DEL CREDTIO
 let totalMontoP = document.getElementById('totalMonto')
 let totalCuotasP = document.getElementById('totalCuotas')
 let valorCuotaP = document.getElementById('valorCuota')
 let totalInteresesP = document.getElementById('totalIntereses')
 let totalPagarP = document.getElementById('totalPagar');
+
+//===== DATOS DE LA CUENTA DE BANCO
+let account_number = document.getElementById('numberAccount');
+let account_type = document.getElementById('selectAccount');
+let account_holder_name = document.getElementById('holderAccount')
+let client_id = document.getElementById('idUser');
+let entity_finance = document.getElementById('selectBank')
+
 
 //agregar el id del cliente al modal
 fetch('http://localhost:3000/users')
@@ -63,10 +72,8 @@ hoy.toLocaleDateString();
 
 /* ============== ENVIAR DATOS A LA BASE DE DATOS LOAN_DETAILS ============= */
 
-btnPedirCredito.addEventListener('click', ()=>{
-
+btnEnviar.addEventListener('click', ()=>{
 let documentUser = localStorage.getItem('numberDocument')
-
 /* let numberDocument = {
     id:documentUser
 }
@@ -78,15 +85,13 @@ fetch(`http://localhost:3001/loan_details`,{
     .then((response)=>{response.json()})
     .then(data =>{
     }) */
-fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
 
-
+fetch("http://localhost:3001/loan_details")
+    .then(r => r.json())
+    .then(d => {
         resultado = d.filter(function(element){
             return element.id == documentUser
         });
-
-        /* Habilitar el boton */
-
         nuevo_credito ={
             total_capital: totalMontoP.textContent,
             fecha_solicitud: hoy.toLocaleDateString(),
@@ -105,7 +110,6 @@ fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
             .then(data=>{
                 console.log(data);
                 if(data != ""){
-                    //alert("nice"); 
                     data.credit_data.push(nuevo_credito);
                     //creo un nuevo objeto
                     nuevo_registro ={
@@ -133,25 +137,72 @@ fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
             fetch(`http://localhost:3001/loan_details`,{
             method: "POST",
             body : JSON.stringify(nuevo_registro),
-            headers:{
-                "Content-Type" : "application/json"
-            }
+            headers:{"Content-Type" : "application/json"}
             })
             .then(r => r.json())
             .then(d => {
                 
             }); 
         }
+    })
 
-})
+//======== ENVIAR INFORMACION A BD ACCOUNT ========
+    let dataAccount = {
+        account_number:account_number.value ,
+        account_type: account_type.value,
+        account_holder_name: account_holder_name.value,
+        client_id: client_id.value,
+        entity_finance: entity_finance.value
+    }
+    fetch ('http://localhost:3002/accounts')
+    .then ((response) => response.json())
+    .then (data => {
+            resultado = data.filter(function(element){
+                return element.account_number == account_number.value
+            });
+            if (resultado != ""){
+                console.log('ya existe la cuenta');
+            }
+            else{
+                fetch ('http://localhost:3002/accounts',{
+                    method: "POST",
+                    body: JSON.stringify(dataAccount),
+                    headers: {'Content-type': 'application/json'}
+                })
+                .then ((response) => response.json())
+            }
+    })//cierre enviar info a la bd account
 
-});
+    // cerrar modal
+    
 
+});//cierra el evento de btnEnviar
+
+//======= HABILITAR EL BOTON DE ENVIAR DEL MODAL CUANDO LOS CAMPOS ESTEN LLENOS
+let modalAccount = document.getElementById('modalAccount');
+btnEnviar.setAttribute('disabled', 'disabled');
+
+// EVENTOS DE LOS CAMPOS REQUERIDOS
+account_number.addEventListener('input', habilitarBtn);
+account_type.addEventListener('input', habilitarBtn);
+account_holder_name.addEventListener('input', habilitarBtn);
+entity_finance.addEventListener('input', habilitarBtn);
+
+// HABILIAR O DESHABILITAR EL BOTON DE ENVIAR
+function habilitarBtn() { 
+    if ( account_number.value != "" && entity_finance.value != "" && 
+    account_holder_name.value !="" && account_type.value != "") {
+        btnEnviar.removeAttribute('disabled');
+    } else {
+        btnEnviar.setAttribute('disabled', 'disabled');
+    }
+}
+habilitarBtn();
+
+//========== HABILITAR BOTON QUE ABRE EL MODAL CUANDO LOS CAMPOS DEL CREDITO ESTEN LLENOS =============
 btnPedirCredito.setAttribute('disabled', 'disabled');
-
-function btn () {
-    if (totalMontoP.innerText != "" ){
-        console.log("Esto esta lleno !",totalMontoP.innerText);
+function btnModalOpen () {
+    if (totalMontoP.innerText != ""){
         btnPedirCredito.removeAttribute('disabled');
         
     }else{
@@ -160,8 +211,7 @@ function btn () {
     }
 }
 
-
-
+// ============ REMOVER ITEMS DEL LOCAL PARA CERRAR SESION ==================
 btnLogOut.addEventListener('click', ()=>{
     localStorage.removeItem('active')
     localStorage.removeItem('numberDocument');
@@ -175,3 +225,42 @@ function sesionOpen (){
     } 
 }
 sesionOpen()
+
+//convertir datos a number
+
+// totalMontoP.addEventListener('input', ()=>{
+//     let COP = new Intl.NumberFormat('en-US', {
+//         style: 'currency',
+//         currency: 'COP',
+//     });
+//     let formateada = COP.format(parseFloat(totalMontoP.textContent.replace(/[^0-9.-]+/g, '')));
+//     console.log(formateada);
+    
+//     let cantidadNumerica = parseFloat(formateada.replace(/[^0-9.-]+/g, ''));
+//     console.log(cantidadNumerica);
+// })
+
+var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList' || mutation.type === 'characterData') {
+            // El contenido de la etiqueta <p> ha cambiado
+            let COP = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'COP',
+            });
+
+            let formateada = COP.format(parseFloat(totalMontoP.textContent.replace(/[^0-9.-]+/g, '')));
+            console.log(formateada);
+
+            let cantidadNumerica = parseFloat(formateada.replace(/[^0-9.-]+/g, ''));
+            console.log(cantidadNumerica);
+        }
+    });
+});
+
+// Configurar el observador para que observe cambios en los nodos hijos y en los datos del personaje
+var observerConfig = { childList: true, characterData: true };
+
+// Iniciar la observación en el nodo de la etiqueta <p>
+observer.observe(totalMontoP, observerConfig);
+

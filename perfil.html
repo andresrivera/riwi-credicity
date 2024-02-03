@@ -416,9 +416,11 @@
                   <p class="text-body mb-2 text-center">Monto:</p>
                 </div>
 
-                <div class="col-md-6">
-                  <p id="totalMonto"></p>
-                </div>
+                  <div class="col-md-6">
+                    <p id="totalMonto"></p>
+                  </div>
+              
+              
               </div>
 
               <div class="row">
@@ -580,11 +582,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Información bancaria</h1>
+        <p class="modal-title fs-5" id="exampleModalLabel">información bancaria, acá se desembolsara el dinero</p>
+    
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <form class="table" name="bankInformation">
+
+      <div class="modal-body" >
+        <form class="table" name="bankInformation" id="modalAccount">
 
           <div class="row col-md-12 mt-3">
             <div class="col-md-6">
@@ -629,7 +633,7 @@
               <label for="">Número de cuenta</label>
             </div>
             <div class="col-md-6">
-              <input type="numeber" min="0" class="form-control">
+              <input type="numeber" min="0" class="form-control" id="numberAccount">
             </div>
           </div>
 
@@ -638,7 +642,7 @@
               <label for="">Nombre del titular de la cuenta</label>
             </div>
             <div class="col-md-6">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" id="holderAccount">
             </div>
           </div>
 
@@ -646,7 +650,7 @@
       </div>
 
       <div class="modal-footer">
-        <button id="btnEnviar" type="button" class="btn btn-primary" style="background-color: #9200D7; border:none;" >Enviar</button>
+        <button id="btnEnviar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CreditoAceptado" style="background-color: #9200D7; border:none;" >Enviar</button>
       </div>
 
     </div>
@@ -654,11 +658,22 @@
 </div>
 <!-- FIN MODAL FORMULARIO INFORMACION TARJETA -->
 
-
-
-
-
-
+<!-- MODAL CREDITO ACEPTADO -->
+<!-- Modal -->
+<div class="modal fade" id="CreditoAceptado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title" id="exampleModalLabel">Solicitud de credito</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Tu Solicitud de credito fue aceptada, en menos de 24 horas el dinero sera depositado tu cuenta</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN MODAL CREDITO ACEPTADO -->
 
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -676,7 +691,7 @@
 <script src="assets/js/main.js"></script>
 <script src="./assets/js/profile.js"></script>
 <script src="assets/js/calculator.js"></script>
-  </body>
-  
-  </html>
+
+</body>
+</html>
 
