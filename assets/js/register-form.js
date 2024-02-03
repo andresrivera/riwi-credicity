@@ -7,10 +7,15 @@ hoy.toLocaleDateString();
 //let termAndConditions = document.getElementById("termAndConditions");
 //let personalData = document.getElementById("personalData");
 
-let btnRegister = document.getElementById('btnRegister');
+
+
+
+
+//console.log(listaDatos);
 
 function addNewUser (){
-
+    
+    let btnRegister = document.getElementById('btnRegister');
     let nameUser = document.getElementById("name").value;
     let last_name = document.getElementById("last_name").value;
     let genderUser = document.querySelector('input[name="gendern"]:checked').value;
@@ -24,6 +29,7 @@ function addNewUser (){
     let stateUser = document.getElementById("state").value;
     let cityUser = document.getElementById("city").value;
     let create_password = document.getElementById("create_password").value;
+    
 
     let dataUser = {
         name: nameUser,
@@ -41,35 +47,46 @@ function addNewUser (){
         password: create_password,
         created_at: hoy.toLocaleDateString()
     }
+    
+    dataUser.array.forEach(element => {
+        
+    });
+
+    for (let clave in dataUser) {
+        if (!dataUser[clave]) {
+            console.log(`El campo "${clave}" está vacío.`);   
+        }
+    }
 
     fetch('http://localhost:3000/users', {
-        method: "POST",
-        body: JSON.stringify(dataUser),
+        method: "GET",
         headers: {'Content-type': 'application/json'}
     })
     .then((response) => response.json())
-    .then(data =>{console.log(data);})
+    .then(data => {
+        // Buscamos si el documento del usuario ya existe en la base de datos
+        const existingUser = data.find(usuario => usuario.document === document_number);
+
+        if (existingUser) {
+            console.log("El usuario ya existe en la base de datos. No podemos continuar.");
+        } else {
+            // Si no existe, creamos el nuevo usuario
+            fetch('http://localhost:3000/users', {
+                method: "POST",
+                body: JSON.stringify(dataUser),
+                headers: {'Content-type': 'application/json'}
+            })
+            .then((response) => response.json())
+            .then(data =>{console.log(data);})
+
+
+        }
+})
+
 }
+
 btnRegister.onclick = addNewUser
 
-/* =================== FUNCIONALIDAD DE VERIFICAR SI TODOS LOS INPUS ESTAN LLENOS ================= */
-function login() {
 
-    if (! gmail.value.match(mailformat) ) {
-        advertencia.innerHTML=" HEMOS ENTRADO "
 
-    }
-     if(gmail){
-        let advertencia = document.getElementById("advertencia")
-        gmail.classList.add("is-valid")
-        advertencia.innerHTML="el correo o la contraseña no coinciden"
-    } 
-    userscounts.forEach(function(user) {
-        if (gmail.value===user.gmail && pasword.value===user.pasword) {
-            sessionStorage.setItem('nombre',user.name);
-            location.href = "pages/home.html";
-            
-        }
-    })
 
-}
