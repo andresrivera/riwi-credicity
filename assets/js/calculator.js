@@ -41,6 +41,8 @@ formCalculator.addEventListener('change', function simularCredito() {
     valorCuota.textContent = COP.format(valorCuotaCredito)
     totalIntereses.innerText = COP.format (valorIntereses)
     totalPagar.textContent = COP.format(totalPagarCredito)
+    //activar btn del modal
+    btn()
 }) 
 
 

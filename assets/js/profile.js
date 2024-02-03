@@ -45,8 +45,7 @@ let totalMontoP = document.getElementById('totalMonto')
 let totalCuotasP = document.getElementById('totalCuotas')
 let valorCuotaP = document.getElementById('valorCuota')
 let totalInteresesP = document.getElementById('totalIntereses')
-let totalPagarP = document.getElementById('totalPagar')
-
+let totalPagarP = document.getElementById('totalPagar');
 
 //agregar el id del cliente al modal
 fetch('http://localhost:3000/users')
@@ -85,6 +84,9 @@ fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
         resultado = d.filter(function(element){
             return element.id == documentUser
         });
+
+        /* Habilitar el boton */
+
         nuevo_credito ={
             total_capital: totalMontoP.textContent,
             fecha_solicitud: hoy.toLocaleDateString(),
@@ -103,7 +105,7 @@ fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
             .then(data=>{
                 console.log(data);
                 if(data != ""){
-                    alert("nice"); 
+                    //alert("nice"); 
                     data.credit_data.push(nuevo_credito);
                     //creo un nuevo objeto
                     nuevo_registro ={
@@ -143,10 +145,20 @@ fetch("http://localhost:3001/loan_details").then(r => r.json()).then(d => {
 
 })
 
+});
 
+btnPedirCredito.setAttribute('disabled', 'disabled');
 
-}); 
+function btn () {
+    if (totalMontoP.innerText != "" ){
+        console.log("Esto esta lleno !",totalMontoP.innerText);
+        btnPedirCredito.removeAttribute('disabled');
+        
+    }else{
 
+        console.log("Esto esta vacio !!!!!!!");
+    }
+}
 
 
 
@@ -163,4 +175,3 @@ function sesionOpen (){
     } 
 }
 sesionOpen()
-
