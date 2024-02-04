@@ -469,11 +469,6 @@
                 </div>
               </div>
             </div>
-
-        
-
-     
-
             <div class="text-center py-3">
               <button id="btnPedirCredito" type="button" class="btn btn-primary btn-md btn-Credito" data-bs-toggle="modal" data-bs-target="#ModalInfoTarjeta">PEDIR MI CREDITO</button>
             </div>
@@ -482,12 +477,13 @@
     </div>
   </div>
 </section>
-
 <!-- End Contact Section -->
 </main>
 <!--  -->
+<div class="container" id="newCredit">
 
-  
+</div>
+
 <!--==== END MAIN ====-->
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -497,7 +493,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-12 text-center">
           <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <p>Aca encontraras nuevas noticias</p>
         </div>
         <div class="col-lg-6">
           <form action="" method="post">
@@ -625,8 +621,6 @@
               </select>
             </div>
           </div>
-
-
          
           <div class="row col-md-12 mt-3">
             <div class="col-md-6">
@@ -645,34 +639,31 @@
               <input type="text" class="form-control" id="holderAccount">
             </div>
           </div>
-
+          <div class="modal-footer">
+            <button id="btnEnviar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalCreditoAceptado" style="background-color: #9200D7; border:none;" >Enviar</button>
+          </div>  
         </form>
       </div>
-
-      <div class="modal-footer">
-        <button id="btnEnviar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CreditoAceptado" style="background-color: #9200D7; border:none;" >Enviar</button>
-      </div>
-
     </div>
   </div>
 </div>
 <!-- FIN MODAL FORMULARIO INFORMACION TARJETA -->
 
 <!-- MODAL CREDITO ACEPTADO -->
-<!-- Modal -->
-<div class="modal fade" id="CreditoAceptado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalCreditoAceptado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <p class="modal-title" id="exampleModalLabel">Solicitud de credito</p>
+        <h5 class="modal-title" id="exampleModalLabel">Solicitud de credito</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Tu Solicitud de credito fue aceptada, en menos de 24 horas el dinero sera depositado tu cuenta</p>
+        <p>Solicitud de credito aceptada, el credito sera desembolsado en menos de 24 horas</p>
       </div>
     </div>
   </div>
 </div>
+
 <!-- FIN MODAL CREDITO ACEPTADO -->
 
 

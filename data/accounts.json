@@ -5,23 +5,8 @@
       "account_type": "Ahorros",
       "account_holder_name": "PEPO VUELAA GIRALDO",
       "client_id": "123123123",
-      "entity_finance": "Bancolombia"
-    },
-    {
-      "id": "fa58",
-      "account_number": "123445454",
-      "account_type": "ahorros",
-      "account_holder_name": "Mona",
-      "client_id": "1000445131",
-      "entity_finance": "davivienda"
-    },
-    {
-      "id": "d789",
-      "account_number": "123",
-      "account_type": "ahorros",
-      "account_holder_name": "Mona",
-      "client_id": "1000445131",
-      "entity_finance": "bancolombia"
+      "entity_finance": "Bancolombia",
+      "id": "159f"
     }
   ]
 }

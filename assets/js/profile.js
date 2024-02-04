@@ -72,7 +72,10 @@ hoy.toLocaleDateString();
 
 /* ============== ENVIAR DATOS A LA BASE DE DATOS LOAN_DETAILS ============= */
 
-btnEnviar.addEventListener('click', ()=>{
+btnEnviar.addEventListener('click', (event)=>{
+    event.preventDefault();
+    event.stopPropagation();
+
 let documentUser = localStorage.getItem('numberDocument')
 /* let numberDocument = {
     id:documentUser
@@ -108,7 +111,7 @@ fetch("http://localhost:3001/loan_details")
             fetch (`http://localhost:3001/loan_details/${documentUser}`)
             .then(response=>response.json())
             .then(data=>{
-                console.log(data);
+                //console.log(data);
                 if(data != ""){
                     data.credit_data.push(nuevo_credito);
                     //creo un nuevo objeto
@@ -158,7 +161,8 @@ fetch("http://localhost:3001/loan_details")
     .then ((response) => response.json())
     .then (data => {
             resultado = data.filter(function(element){
-                return element.account_number == account_number.value
+                return (element.account_number == account_number.value && 
+                    element.client_id == documentUser)
             });
             if (resultado != ""){
                 console.log('ya existe la cuenta');
@@ -172,9 +176,16 @@ fetch("http://localhost:3001/loan_details")
                 .then ((response) => response.json())
             }
     })//cierre enviar info a la bd account
-
-    // cerrar modal
     
+    //nuevo elemento
+    let newCredit = document.getElementById('newCredit');
+    newCredit.innerHTML = `
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <a href="">Tienes un credito activo</a><br> Gracias por confiar en nosotros.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    `
+    newCredit.appendChild(newCredit)
 
 });//cierra el evento de btnEnviar
 
@@ -199,7 +210,7 @@ function habilitarBtn() {
 }
 habilitarBtn();
 
-//========== HABILITAR BOTON QUE ABRE EL MODAL CUANDO LOS CAMPOS DEL CREDITO ESTEN LLENOS =============
+//========== HABILITAR BOTON QUE ABRE EL MODAL DE CUENTAS CUANDO LOS CAMPOS ESTEN LLENOS =============
 btnPedirCredito.setAttribute('disabled', 'disabled');
 function btnModalOpen () {
     if (totalMontoP.innerText != ""){
@@ -240,27 +251,5 @@ sesionOpen()
 //     console.log(cantidadNumerica);
 // })
 
-var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        if (mutation.type === 'childList' || mutation.type === 'characterData') {
-            // El contenido de la etiqueta <p> ha cambiado
-            let COP = new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'COP',
-            });
 
-            let formateada = COP.format(parseFloat(totalMontoP.textContent.replace(/[^0-9.-]+/g, '')));
-            console.log(formateada);
-
-            let cantidadNumerica = parseFloat(formateada.replace(/[^0-9.-]+/g, ''));
-            console.log(cantidadNumerica);
-        }
-    });
-});
-
-// Configurar el observador para que observe cambios en los nodos hijos y en los datos del personaje
-var observerConfig = { childList: true, characterData: true };
-
-// Iniciar la observación en el nodo de la etiqueta <p>
-observer.observe(totalMontoP, observerConfig);
 
