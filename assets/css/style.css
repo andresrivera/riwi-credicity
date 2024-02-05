@@ -2576,14 +2576,37 @@ background-color: #07d5c0;
 	border-radius: 3px;
 	display: none;
 }
-
 .formulario__mensaje-activo {
-	display: block;
+  display: block;
+}
+
+.formulario__mensaje-exito {
+  font-size: 14px;
+	color: #25ee0a;
+	display: none;
+}
+
+
+.formulario__mensaje-exito-activo {
+	display: block !important;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
 }
 
 
 
 
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
 
 /* ======  END ESTILOS EL MONA  ========== */
 
