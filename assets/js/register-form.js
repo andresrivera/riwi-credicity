@@ -12,10 +12,11 @@ hoy.toLocaleDateString();
 
 
 
+let btnRegister = document.getElementById('btnRegister');
+btnRegister.setAttribute('disabled', 'disabled');
 
 function addNewUser (){
     
-    let btnRegister = document.getElementById('btnRegister');
     let nameUser = document.getElementById("name").value;
     let last_name = document.getElementById("last_name").value;
     let genderUser = document.querySelector('input[name="gendern"]:checked').value;
@@ -59,7 +60,7 @@ function addNewUser (){
         const existingUser = data.find(usuario => usuario.document === document_number);
 
         if (existingUser) {
-            console.log("El usuario ya existe en la base de datos. No podemos continuar.");
+            alert("El usuario ya existe en la base de datos. No podemos continuar.");
         } else {
             // Si no existe, creamos el nuevo usuario
             fetch('http://localhost:3000/users', {
@@ -69,13 +70,16 @@ function addNewUser (){
             })
             .then((response) => response.json())
             .then(data =>{console.log(data);})
-
+            
 
         }
     })
 
 }
+function CreandoUsuario() {
+    $('#ModalUsuarioCreado').modal(show)
 
+}
 btnRegister.onclick = addNewUser
 
 
@@ -83,6 +87,18 @@ btnRegister.onclick = addNewUser
 
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+
+
+
+
+function habilitarBtnFormulario() { 
+    if (inputs != "") {
+        btnRegister.removeAttribute('disabled');
+    } else {
+        btnRegister.setAttribute('disabled', 'disabled');
+    }
+}
+habilitarBtnFormulario()
 
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{3,16}$/, // Letras, numeros, guion y guion_bajo
@@ -132,6 +148,7 @@ const validarFormulario =(e)=>{
             break;
 
         case 'password2':
+            validarCampo(expresiones.password, e.target, 'password');
             validarPassword2()
 
             break;
@@ -162,8 +179,8 @@ const validarPassword2 = () => {
 	const inputPassword2 = document.getElementById('check_password2');
 
 	if(inputPassword1.value !== inputPassword2.value){
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
 		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
 	} else {
@@ -179,12 +196,19 @@ inputs.forEach((input)=>{
     input.addEventListener("blur",validarFormulario);
 })
 
-
+var modal1 = new bootstrap.Modal(document.getElementById('ModalUsuarioCreado')); 
+function toggleModal1(){ 
+      
+    // Toggle Modal 
+    modal1.toggle(); 
+}
 
 formulario.addEventListener('submit',() => {
 
+
+
     //const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono ){
+	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -194,8 +218,13 @@ formulario.addEventListener('submit',() => {
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
-		});
+		}, 5000);
 	} else {
+        modal1.toggle()
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+
+/* andesss */
+ 
