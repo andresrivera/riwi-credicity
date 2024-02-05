@@ -51,7 +51,8 @@
 
           <li><a class="getstarted scrollto ButtonLoginIndex textBoxL-4" href="login.html" >  Login/registro</a></li>
           <li><a  id="language-link" class="nav-link scrollto" href="#">
-            <img  class="IconIdiom" alt="" src="assets/img/United-kingdom_flag_icon_round.svg.png">
+            <img  class="IconIdiom" alt="" src="assets/img/United-kingdom_flag_icon_round.svg.png" style="display: none;">
+            <div id="google_translate_element"></div>
           </a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -347,7 +348,7 @@
           <div class="col-xl-8 d-flex content">
             <div class="row align-self-center gy-4">
 
-              <div class="col-md-6 icon-box" data-aos="fade-up">
+              <div class="col-md-6 icon-box box-style-001" data-aos="fade-up">
                 <img src="assets/img/image 1.png" alt="">
                 <div>
                   <h4>Ser Mayor De Edad </h4>
@@ -355,7 +356,7 @@
                 </div>
               </div>
 
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-6 icon-box box-style-001" data-aos="fade-up" data-aos-delay="100">
                 <img src="assets/img/image 2.png" alt="">
                 <div>
                   <h4>Cuenta Bancaria</h4>
@@ -363,7 +364,7 @@
                 </div>
               </div>
 
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-md-6 icon-box box-style-001" data-aos="fade-up" data-aos-delay="200">
                 <img src="assets/img/image 4.png" alt="">
                 <div>
                   <h4>Correo Electronico</h4>
@@ -371,15 +372,15 @@
                 </div>
               </div>
 
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                <img style="height: 70px;" src="assets/img/compues.png" alt="">
+              <div class="col-md-6 icon-box box-style-001" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/compues.png" alt="">
                 <div>
                   <h4>Paz y Salvo</h4>
                   <p>Debes de tener un paz y salvo con data credito, para nosotros poder darte un prestamo</p>
                 </div>
               </div>
 
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="col-md-6 icon-box box-style-001" data-aos="fade-up" data-aos-delay="400">
                 <img src="assets/img/image 5.png" alt="">
                 <div>
                   <h4>Linea telefonica</h4>
@@ -387,7 +388,7 @@
                 </div>
               </div>
 
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+              <div class="col-md-6 icon-box box-style-001" data-aos="fade-up" data-aos-delay="500">
                 <img src="assets/img/image 7.png" alt="">
                 <div>
                   <h4>Ubicacion</h4>
@@ -536,7 +537,13 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/calculator.js"></script>
-  <script src="./assets/js/babel.js"></script>
+  <!--<script src="./assets/js/babel.js"></script>-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+    }
+    </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

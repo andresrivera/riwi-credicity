@@ -79,7 +79,8 @@
             <li><a class="nav-link scrollto" href="#">¿Cómo funciona?</a></li>
             <li><a class="getstarted scrollto bg-back-purple-01 ButtonLoginIndex" href="login.html">Log out</a></li>
             <li><a class="nav-link scrollto" href="#">
-              <img class="IconIdiom" alt="" src="assets/img/United-kingdom_flag_icon_round.svg.png">
+              <img  class="IconIdiom" alt="" src="assets/img/United-kingdom_flag_icon_round.svg.png" style="display: none;">
+            <div id="google_translate_element"></div>
             </a></li>
             
           </ul>
@@ -315,7 +316,13 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script src="assets/js/loans.js"></script>
-
+  <!--<script src="./assets/js/babel.js"></script>-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+    }
+    </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
   
   </html>
