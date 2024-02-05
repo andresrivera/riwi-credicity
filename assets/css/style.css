@@ -2879,13 +2879,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border: 1px solid #4154f1;
 }
 
-
-
-
-
-
-
-
     /*end range*/
 
     .box-style-001{
@@ -2956,5 +2949,62 @@ input[type=range]:focus::-webkit-slider-runnable-track {
       line-height: 5rem;
     }
     #contact img{width: 100%;}
-
   }
+
+  /* ======= ESTILOS EXTRAIDOS DESDE LA PAGINA DE PERFIL ======= */
+
+.BoxThePerfil{
+  background-color: #9200D7; 
+  position: relative; 
+  padding-left:170px;
+  border-radius: 12px 12px 0 0;
+  min-height: 120px;
+}
+
+.BoxTheperfil2{
+  background-color: #DFDFDF; 
+  position: relative;
+  padding-left:170px;
+  border-radius: 0px 0px 12px 12px;
+  min-height: 80px;
+}
+
+.imageThePerfil{
+  width:150px;
+  height: auto;
+  border-radius: 50%;
+  position:absolute;
+  top: 10%;
+  left: 10px;
+  top: calc(20% - 10px);
+  z-index: 3;
+}
+
+.BoxTheCupo{
+  background-color: #DFDFDF;
+  position: relative; 
+  border-radius: 12px 12px 0 0;
+  min-height: 120px;
+  min-height: 120px;
+  }
+
+.BoxTheCupo2{
+  background-color: #9200D7;
+  position: relative;
+  border-radius: 0px 0px 12px 12px;
+  min-height: 80px;
+  color: #fff;
+}
+
+.myBtn{
+  background-color: #9200D7;
+  color: #ffffff;
+  border-radius: 30px;
+  height: 70px;
+  width: 200px;
+}
+
+.BtnThesectionTargeta{
+  background-color: #9200D7; 
+  border:none;
+}

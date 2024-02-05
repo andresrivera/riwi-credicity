@@ -253,3 +253,19 @@ sesionOpen()
 
 
 
+/* ==========FUNCION LA COLOCACION DEL NOMBRE============= */
+let NombreDelUsuario = document.getElementById("NombreUsuario")
+let documentoDesdeLocal = localStorage.getItem("numberDocument");
+
+fetch("http://localhost:3000/users", { method: 'GET', headers: { "content-type": "application/json" } }
+)
+.then(response => {return response.json() ;
+}).then(data=>{
+  data.forEach((usuario)=>{
+
+    if(documentoDesdeLocal==usuario.document){
+        NombreDelUsuario.innerHTML = usuario.name + " " + usuario.last_name;
+    }
+  })
+})
+

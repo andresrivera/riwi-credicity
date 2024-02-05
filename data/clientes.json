@@ -33,6 +33,23 @@
       "city": "mocoa",
       "password": "123",
       "created_at": "11/25/2024"
+    },
+    {
+      "id": "11c3",
+      "name": "ana",
+      "last_name": "cansona",
+      "gender": "hombre",
+      "birthday": "2024-02-05",
+      "email": "sarahpenavasquez@gmail.com",
+      "phone": "3023154517",
+      "document_type": "cedula",
+      "document": "24244",
+      "expedition_date": "2024-02-05",
+      "country": "Colombia",
+      "state": "antioquia",
+      "city": "medellin",
+      "password": "1231",
+      "created_at": "5/2/2024"
     }
   ]
 }

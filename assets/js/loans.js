@@ -2,20 +2,19 @@
   
   //let variable = localStorage.setItem("numerDocument","1000445131")
 
-  let documentoDesdeLocal = localStorage.getItem("numerDocument");
+  let documentoDesdeLocal = localStorage.getItem("numberDocument");
 
   let tablaId = document.getElementById("credits_table");
 
-fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content-type": "application/json" } }
-  )
+fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content-type": "application/json" } })
   .then(response => {return response.json() ;
   }).then(data=>{
-
+    
       data.forEach(cliente => {
           //console.log(cliente.documento_cliente)
-        if (documentoDesdeLocal==cliente.documento_cliente) {
+        if (documentoDesdeLocal==cliente.id) {
           // console.log(cliente.credit_data);
-            console.log(cliente.documento_cliente);
+            console.log(cliente.id);
             let CreditosDelCliente = cliente.credit_data
             CreditosDelCliente.forEach(cada_credito => {
                 let fila = document.createElement("tr");
@@ -26,7 +25,7 @@ fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content
                 fila.appendChild(cellCapital);
 
                 let CellFechaSolicitud = document.createElement("td");
-                CellFechaSolicitud.innerHTML= cada_credito.fecha_inicio;
+                CellFechaSolicitud.innerHTML= cada_credito.fecha_solicitud;
                 fila.appendChild(CellFechaSolicitud);
 
                 let CellFechaFinalizacion = document.createElement("td");
@@ -34,7 +33,7 @@ fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content
                 fila.appendChild(CellFechaFinalizacion);
 
                 let CellTotalPago = document.createElement("td");
-                CellTotalPago.innerHTML= cada_credito.total_a_pagar;
+                CellTotalPago.innerHTML= cada_credito.total_pagar;
                 fila.appendChild(CellTotalPago);
 
                 let CellCuotas = document.createElement("td");
@@ -75,4 +74,20 @@ fetch("http://localhost:3000/users", { method: 'GET', headers: { "content-type":
   })
 })
 
+
+// ============ REMOVER ITEMS DEL LOCAL PARA CERRAR SESION ==================
+let btnLogOut = document.getElementById('btnLogOut');
+btnLogOut.addEventListener('click', ()=>{
+  localStorage.removeItem('active')
+  localStorage.removeItem('numberDocument');
+  localStorage.removeItem('id')
+})
+
+function sesionOpen (){
+  let sesion = localStorage.getItem('active');
+  if (!sesion){
+      location.href = 'login.html'
+  } 
+}
+sesionOpen()
 
