@@ -3,20 +3,12 @@ const tiempoTranscurrido = Date.now();
 const hoy = new Date(tiempoTranscurrido);
 hoy.toLocaleDateString();
 
-
-//let termAndConditions = document.getElementById("termAndConditions");
-//let personalData = document.getElementById("personalData");
-
-
-
-
-
-
 let btnRegister = document.getElementById('btnRegister');
-btnRegister.setAttribute('disabled', 'disabled');
+let creacionExitosa = document.getElementById('creacionExitosa')
+
+
 
 function addNewUser (){
-    
     let nameUser = document.getElementById("name").value;
     let last_name = document.getElementById("last_name").value;
     let genderUser = document.querySelector('input[name="gendern"]:checked').value;
@@ -30,7 +22,6 @@ function addNewUser (){
     let stateUser = document.getElementById("state").value;
     let cityUser = document.getElementById("city").value;
     let create_password = document.getElementById("create_password").value;
-    
 
     let dataUser = {
         name: nameUser,
@@ -61,7 +52,7 @@ function addNewUser (){
 
         if (existingUser) {
             alert("El usuario ya existe en la base de datos. No podemos continuar.");
-        } else {
+        } else if (!existingUser){
             // Si no existe, creamos el nuevo usuario
             fetch('http://localhost:3000/users', {
                 method: "POST",
@@ -69,36 +60,34 @@ function addNewUser (){
                 headers: {'Content-type': 'application/json'}
             })
             .then((response) => response.json())
-            .then(data =>{console.log(data);})
-            
-
+            .then(data => {
+                creacionExitosa.innerHTML = `<div class="alert alert-secondary" role="alert">
+                <p>Cuenta creada con exito</p>
+             </div>`;
+                setTimeout(()=>{
+                   
+              location.href = 'login.html'
+                },3000);
+            });
         }
+        /* else {
+            document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+        }  */
     })
 
 }
-function CreandoUsuario() {
+/* function CreandoUsuario() {
     $('#ModalUsuarioCreado').modal(show)
 
-}
+} */
 btnRegister.onclick = addNewUser
 
 
-/* ========= FUNCIONES PARA OCULTAR ========*/
+/* ========= FUNCIONES PARA ENVIAR AL BD CLIENTES ========*/
 
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-
-
-
-
-function habilitarBtnFormulario() { 
-    if (inputs != "") {
-        btnRegister.removeAttribute('disabled');
-    } else {
-        btnRegister.setAttribute('disabled', 'disabled');
-    }
-}
-habilitarBtnFormulario()
+console.log(inputs);
 
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{3,16}$/, // Letras, numeros, guion y guion_bajo
@@ -148,7 +137,7 @@ const validarFormulario =(e)=>{
             break;
 
         case 'password2':
-            validarCampo(expresiones.password, e.target, 'password');
+           // validarCampo(expresiones.password, e.target, 'password');
             validarPassword2()
 
             break;
@@ -160,15 +149,11 @@ const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos[campo] = false;
 	}
@@ -177,6 +162,7 @@ const validarCampo = (expresion, input, campo) => {
 const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('create_password');
 	const inputPassword2 = document.getElementById('check_password2');
+console.log(inputPassword1.value, inputPassword2.value);
 
 	if(inputPassword1.value !== inputPassword2.value){
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
@@ -192,25 +178,19 @@ const validarPassword2 = () => {
 }
 
 inputs.forEach((input)=>{
+    input.addEventListener("keyup",validarPassword2);
+
     input.addEventListener("keyup",validarFormulario);
     input.addEventListener("blur",validarFormulario);
 })
 
-var modal1 = new bootstrap.Modal(document.getElementById('ModalUsuarioCreado')); 
-function toggleModal1(){ 
-      
-    // Toggle Modal 
-    modal1.toggle(); 
-}
 
 formulario.addEventListener('submit',() => {
-
-
 
     //const terminos = document.getElementById('terminos');
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono){
 		formulario.reset();
-
+        
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
@@ -220,9 +200,8 @@ formulario.addEventListener('submit',() => {
 			icono.classList.remove('formulario__grupo-correcto');
 		}, 5000);
 	} else {
-        modal1.toggle()
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	}
+	}  
 });
 
 

@@ -41,7 +41,7 @@ fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content
                 fila.appendChild(CellCuotas);
 
                 let CellFaltante = document.createElement("td");
-                CellFaltante.innerHTML= cada_credito.faltante
+                CellFaltante.innerHTML= cada_credito.cuotas_faltantes
                 fila.appendChild(CellFaltante);
 
                 let CellValorCuota = document.createElement("td");
