@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tu información a la mano | CrediCity</title>
+  <meta content="" name="Encuentra aquí toda tu información personal y crediticia">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="./assets/img/favicon/favicon-32x32.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+  <link href="./assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawStuff);
+
+  function drawStuff() {
+    var data = new google.visualization.arrayToDataTable([
+      ['Atributos', 'Percentage'],
+      ["Conocimiento inicial", 44],
+      ["Conocimiento Adquirido", 76],
+      ["Diseño", 91],
+      ["Actitud", 100],
+      ["Descanso", 2],
+      ["Sinergia", 92],
+      ["Reuniones", 73],
+      ['Otros', 89]
+    ]);
+
+    var options = {
+      width: 800,
+      legend: { position: 'none' },
+      chart: {
+        title: 'Algunos datos del Proyecto',
+        subtitle: 'características por porcentaje' },
+      axes: {
+        x: {
+          0: { side: 'top', label: 'Características y Atributos'} // Top x-axis.
+        }
+      },
+      bar: { groupWidth: "100%" }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+    // Convert the Classic options to Material options.
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  };
+</script>
+
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>CrediCity</span>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="quienes-somos.html">¿Quíenes somos?</a></li>
+          <li><a class="nav-link scrollto" href="#">¿Cómo funciona?</a></li>
+
+
+          <li><a class="getstarted scrollto bg-back-purple-01 ButtonLoginIndex" href="login.html">Login/Register</a></li>
+          <li><a class="nav-link scrollto" href="#">
+            <img  class="IconIdiom" alt="" src="assets/img/United-kingdom_flag_icon_round.svg.png" style="display: none;">
+            <div id="google_translate_element"></div>
+          </a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<!--==== MAIN ====-->
+
+<main id="main">
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values"  style="margin-top: 5%;">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">   
+            <h1>FinTech3</h1>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-md-4 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">        
+            <div class="card">
+              <div class="card-body"><img class="img-fluid" src="./assets/img/fintech3-1.jpg" alt=""></div>
+              <div class="card-footer"><h2>Santiago Mona</h2></div>
+            </div>
+            
+            
+          </div>
+          <div class="col-md-4 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">        
+            <div class="card">
+              <div class="card-body"> <img class="img-fluid" src="./assets/img/fintech3-2.jpg" alt=""></div>
+              <div class="card-footer"><h2>Felipe Gallego</h2></div>
+            </div>
+            
+           
+          </div>
+          <div class="col-md-4 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">        
+            <div class="card">
+              <div class="card-body"><img class="img-fluid" src="./assets/img/fintech3-3.jpg" alt=""></div>
+              <div class="card-footer"><h2>Andrés Rivera</h2></div>
+            </div>
+           
+            
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Values Section -->
+
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">        
+            <div id="top_x_div" style="width: 800px; height: 600px;"></div>
+
+
+
+          </div>
+
+          
+        </div>
+      
+        </div>
+      </section>
+ 
+
+
+<!-- End Contact Section -->
+</main>
+<!--  -->
+
+  
+<!--==== END MAIN ====-->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4>Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <span>CrediCity</span>
+          </a>
+          <p>En CrediCity, estamos comprometidos en ayudarte a alcanzar tus metas financieras de una manera rápida, transparente y segura. Como una fintech especializada en créditos, entendemos que cada situación es única, por eso ofrecemos soluciones personalizadas que se adaptan a tus necesidades específicas.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Inicio</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Preguntas</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Quienes Somos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Como funciona</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>TRANSPARENCIA</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terminos y condiciones</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>CONTÁCTANOS</h4>
+          <p>
+            Manila <br>
+            Medellín, Antioquia<br>
+            Colombia <br><br>
+            <strong>Teléfono:</strong> +57 604 4717766<br>
+            <strong>Email:</strong> pipedrive.29@gmail.com
+            14<br>
+          </p>
+          <p>
+            horarios de atencion:<br>
+            lunes a viernes<br>
+            de 8 a.m a 10p.m.<br>
+            sabados y domingos.<br>
+            de 8 a.m a 1 pm<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>FinTech3</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="#/">Fintech3</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<!-- MODAL FORMULARIO INFORMACION TARJETA -->
+<div class="modal fade" id="ModalInfoTarjeta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Información bancaria</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="table" name="bankInformation">
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Número cedula</label>
+            </div>
+            <div class="col-md-6">
+              <input name="idClient" id="idUser" type="text" min="0" class="form-control" value="" readonly>
+            </div>
+          </div>
+
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Tipo de cuenta</label>
+            </div>
+            <div class="col-md-6">
+              <select name="selectAccountUser" id="selectAccount" class="form-control">
+                <option value="" disabled selected>Tipo de cuenta</option>
+                <option value="ahorros">Ahorros</option>
+                <option value="corriente">Corriente</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Selecciona tu banco</label>
+            </div>
+            <div class="col-md-6">
+              <select name="selectBankUser" id="selectBank" class="form-control">
+                <option value="" disabled selected>Selecciona tu banco</option>
+                <option value="bancolombia">Bancolombia</option>
+                <option value="davivienda">Davivienda</option>
+              </select>
+            </div>
+          </div>
+
+
+         
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Número de cuenta</label>
+            </div>
+            <div class="col-md-6">
+              <input type="numeber" min="0" class="form-control">
+            </div>
+          </div>
+
+          <div class="row col-md-12 mt-3">
+            <div class="col-md-6">
+              <label for="">Nombre del titular de la cuenta</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnEnviar" type="button" class="btn btn-primary" style="background-color: #9200D7; border:none;" >Enviar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- FIN MODAL FORMULARIO INFORMACION TARJETA -->
+
+
+
+
+
+
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="./assets/js/profile.js"></script>
+<script src="assets/js/calculator.js"></script>
+  </body>
+  
+  </html>
+
