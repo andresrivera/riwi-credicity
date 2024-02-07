@@ -33,6 +33,23 @@
       "city": "mocoa",
       "password": "123",
       "created_at": "11/25/2024"
+    },
+    {
+      "id": "5deb",
+      "name": "Javier",
+      "last_name": "Perez",
+      "gender": "hombre",
+      "birthday": "2024-01-31",
+      "email": "sara@gmail.com",
+      "phone": "3023154517",
+      "document_type": "cedula",
+      "document": "123456789",
+      "expedition_date": "2024-01-30",
+      "country": "Colombia",
+      "state": "antioquia",
+      "city": "medellin",
+      "password": "123456",
+      "created_at": "6/2/2024"
     }
   ]
 }

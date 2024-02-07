@@ -29,7 +29,7 @@ fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content
                 fila.appendChild(CellFechaSolicitud);
 
                 let CellFechaFinalizacion = document.createElement("td");
-                CellFechaFinalizacion.innerHTML= cada_credito.fecha_finalizacion;
+                CellFechaFinalizacion.innerHTML= cada_credito.fecha_solicitud;
                 fila.appendChild(CellFechaFinalizacion);
 
                 let CellTotalPago = document.createElement("td");
@@ -49,7 +49,7 @@ fetch("http://localhost:3001/loan_details", { method: 'GET', headers: { "content
                 fila.appendChild(CellValorCuota);
 
                 let CellEStado = document.createElement("td");
-                CellEStado.innerHTML= cada_credito.estado
+                CellEStado.innerHTML= 'Pendiente'
                 fila.appendChild(CellEStado);
 
                 

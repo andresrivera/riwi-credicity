@@ -52,7 +52,14 @@ function addNewUser (){
 
         if (existingUser) {
             alert("El usuario ya existe en la base de datos. No podemos continuar.");
-        } else if (!existingUser){
+        }
+        else if (inputs[0].values != "" && inputs[1].value != "" && inputs[2].value != "" && inputs[3].value != "" && inputs[4].value != "" && inputs[5].value != "" && inputs[6].value != "" && inputs[7].value != "" && inputs[8].value != "" && inputs[9].value != "" && inputs[10].value != "" && inputs[11].value != "" && inputs[12].value != "" && inputs[13].value != "" ){
+
+            /* ================ */
+            /* document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo'); */
+            document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+            document.getElementById('formulario__mensaje').classList.add('formulario__mensaje');
+            /* =============== */
             // Si no existe, creamos el nuevo usuario
             fetch('http://localhost:3000/users', {
                 method: "POST",
@@ -61,18 +68,18 @@ function addNewUser (){
             })
             .then((response) => response.json())
             .then(data => {
-                creacionExitosa.innerHTML = `<div class="alert alert-secondary" role="alert">
+                creacionExitosa.innerHTML = `<div class="alert alert-success" role="alert">
                 <p>Cuenta creada con exito</p>
              </div>`;
                 setTimeout(()=>{
                    
               location.href = 'login.html'
-                },3000);
+                },2000);
             });
         }
-        /* else {
+        else {
             document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-        }  */
+        } 
     })
 
 }
@@ -87,7 +94,6 @@ btnRegister.onclick = addNewUser
 
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-console.log(inputs);
 
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{3,16}$/, // Letras, numeros, guion y guion_bajo
@@ -162,7 +168,6 @@ const validarCampo = (expresion, input, campo) => {
 const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('create_password');
 	const inputPassword2 = document.getElementById('check_password2');
-console.log(inputPassword1.value, inputPassword2.value);
 
 	if(inputPassword1.value !== inputPassword2.value){
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
@@ -188,22 +193,17 @@ inputs.forEach((input)=>{
 formulario.addEventListener('submit',() => {
 
     //const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono){
-		formulario.reset();
-        
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 5000);
+	if(inputs[0].values != "" && inputs[1].value != "" && inputs[2].value != "" && inputs[3].value != "" && inputs[4].value != "" && inputs[5].value != "" && inputs[6].value != "" && inputs[7].value != "" && inputs[8].value != "" && inputs[9].value != "" && inputs[10].value != "" && inputs[11].value != "" && inputs[12].value != "" && inputs[13].value != "" ){
 
-		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario__grupo-correcto');
-		}, 5000);
+        /* document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo'); */
+        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje');
+
+        console.log("No estan vacios");
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+        
 	}  
+ 
 });
 
-
-/* andesss */
- 

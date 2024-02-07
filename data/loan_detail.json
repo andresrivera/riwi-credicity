@@ -12,36 +12,6 @@
           "valor_cuota": "COP 752,466.67",
           "total_intereses": "COP 257,400.00",
           "total_pagar": "COP 2,257,400.00"
-        },
-        {
-          "total_capital": "COP 740,000.00",
-          "fecha_solicitud": "5/2/2024",
-          "cuotas": "2",
-          "moneda": "COP",
-          "cuotas_faltantes": "2",
-          "valor_cuota": "COP 401,746.00",
-          "total_intereses": "COP 63,492.00",
-          "total_pagar": "COP 803,492.00"
-        },
-        {
-          "total_capital": "COP 2,330,000.00",
-          "fecha_solicitud": "5/2/2024",
-          "cuotas": "2",
-          "moneda": "COP",
-          "cuotas_faltantes": "2",
-          "valor_cuota": "COP 1,264,957.00",
-          "total_intereses": "COP 199,914.00",
-          "total_pagar": "COP 2,529,914.00"
-        },
-        {
-          "total_capital": "COP 5,000,000.00",
-          "fecha_solicitud": "2/5/2024",
-          "cuotas": "1",
-          "moneda": "COP",
-          "cuotas_faltantes": "1",
-          "valor_cuota": "COP 5,214,500.00",
-          "total_intereses": "COP 214,500.00",
-          "total_pagar": "COP 5,214,500.00"
         }
       ]
     },
@@ -57,66 +27,21 @@
           "valor_cuota": "COP 1,883,863.00",
           "total_intereses": "COP 297,726.00",
           "total_pagar": "COP 3,767,726.00"
-        },
-        {
-          "total_capital": "COP 1,500,000.00",
-          "fecha_solicitud": "2/5/2024",
-          "cuotas": "3",
-          "moneda": "COP",
-          "cuotas_faltantes": "3",
-          "valor_cuota": "COP 564,350.00",
-          "total_intereses": "COP 193,050.00",
-          "total_pagar": "COP 1,693,050.00"
-        },
-        {
-          "total_capital": "COP 1,670,000.00",
-          "fecha_solicitud": "2/5/2024",
-          "cuotas": "2",
-          "moneda": "COP",
-          "cuotas_faltantes": "2",
-          "valor_cuota": "COP 906,643.00",
-          "total_intereses": "COP 143,286.00",
-          "total_pagar": "COP 1,813,286.00"
-        },
-        {
-          "total_capital": "COP 1,510,000.00",
-          "fecha_solicitud": "2/5/2024",
-          "cuotas": "2",
-          "moneda": "COP",
-          "cuotas_faltantes": "2",
-          "valor_cuota": "COP 819,779.00",
-          "total_intereses": "COP 129,558.00",
-          "total_pagar": "COP 1,639,558.00"
         }
       ]
     },
     {
-      "id": "24244",
-      "credit_data": [
-        {
-          "total_capital": "COP 200,000.00",
-          "fecha_solicitud": "5/2/2024",
-          "cuotas": "2",
-          "moneda": "COP",
-          "cuotas_faltantes": "2",
-          "valor_cuota": "COP 108,580.00",
-          "total_intereses": "COP 17,160.00",
-          "total_pagar": "COP 217,160.00"
-        }
-      ]
-    },
-    {
-      "id": "1000084",
+      "id": "123456789",
       "credit_data": [
         {
           "total_capital": "COP 5,000,000.00",
-          "fecha_solicitud": "2/5/2024",
-          "cuotas": "3",
+          "fecha_solicitud": "6/2/2024",
+          "cuotas": "2",
           "moneda": "COP",
-          "cuotas_faltantes": "3",
-          "valor_cuota": "COP 1,881,166.67",
-          "total_intereses": "COP 643,500.00",
-          "total_pagar": "COP 5,643,500.00"
+          "cuotas_faltantes": "2",
+          "valor_cuota": "COP 2,714,500.00",
+          "total_intereses": "COP 429,000.00",
+          "total_pagar": "COP 5,429,000.00"
         }
       ]
     }
